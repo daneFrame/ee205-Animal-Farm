@@ -37,7 +37,7 @@ void printAllCats(){
     }
 }
 
-int findCat(char name[]){
+int findCat(const char name[]){
     for (int index = 0; index < MAX_CATS; index++)
     {
         if ( strcmp(catDeetsArray[index].Name, name) == 0){

@@ -15,7 +15,7 @@
 #include "updateCats.h"
 #include "catDatabase.h"
 
-void updateCatName(int index, char newName[])
+void updateCatName(int index, const char newName[])
 {
     if(strlen(newName) < 1 || strlen(newName) > MAX_NAME)
     {

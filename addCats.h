@@ -11,5 +11,5 @@
 #pragma once
 #include "catDatabase.h"
 
-extern int addCat(char name[], enum gender catGender, enum breed catBreed, bool catFixed,float Weight,
+extern int addCat(const char name[], enum gender catGender, enum breed catBreed, bool catFixed,float Weight,
         enum Color collarColor1, enum Color collarColor2, unsigned long long license);
