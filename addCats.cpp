@@ -20,7 +20,7 @@
 
 #define DEBUG
 
-int validateDatabase(const char name[],float catWeight) {
+int validateDatabase(const char name[],Weight catWeight) {
     if ((catWeight < 0) | (currentNumCats > 9) | (strlen(name) > MAX_NAME) | (strlen(name) == 0))
     {
         fprintf(stderr, "[%s]:\nCat name must be greater than 0 and less than 30.\nCat weight must be greater than zero\nThe number of Cats submiited into database\nmay not exceed 10\n", PROGRAM_NAME);
@@ -29,7 +29,7 @@ int validateDatabase(const char name[],float catWeight) {
     return 1;
 }
 
-int addCat(const char name[], enum gender catGender, enum breed catBreed, bool catFixed,float catWeight, enum Color collarColor1, enum Color collarColor2, unsigned long long license){
+int addCat(const char name[], enum gender catGender, enum breed catBreed, bool catFixed,Weight catWeight, enum Color collarColor1, enum Color collarColor2, unsigned long long license){
 
     if (validateDatabase(name, catWeight))
     {

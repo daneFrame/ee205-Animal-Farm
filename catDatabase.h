@@ -18,8 +18,11 @@ enum gender {UNKOWN_GENDER, MALE, FEMALE};
 enum breed {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 enum Color {NONE, WHITE, BLACK, BLUE};
 
+typedef float Weight;
+
 struct catDeets{
-    float weight;
+    //float weight;
+    Weight weight;
     enum gender Gender;
     enum breed Breed;
     char Name[MAX_NAME];

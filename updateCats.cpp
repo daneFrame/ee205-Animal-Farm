@@ -41,7 +41,7 @@ void fixCat(int index)
     }
 }
 
-void updateCatWeight(int index, float newWeight)
+void updateCatWeight(int index, Weight newWeight)
 {
     if(newWeight <= 0)
     {
