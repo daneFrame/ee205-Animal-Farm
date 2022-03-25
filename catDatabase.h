@@ -13,7 +13,9 @@
 #define MAX_CATS 10
 #define MAX_NAME 50
 
-extern int currentNumCats;
+typedef int NumCats;
+
+extern NumCats currentNumCats;
 enum gender {UNKOWN_GENDER, MALE, FEMALE};
 enum breed {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 enum Color {NONE, WHITE, BLACK, BLUE};

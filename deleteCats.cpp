@@ -15,7 +15,7 @@
 
 void deleteAllCats()
 {
-    //memset(catDeetsArray[], 0, MAX_CATS);
+
     for(int i = 0; i < MAX_CATS; i++)
     {
         memset(catDeetsArray[i].Name, 0, MAX_CATS);

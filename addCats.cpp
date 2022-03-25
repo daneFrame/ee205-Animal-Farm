@@ -20,7 +20,7 @@
 
 #define DEBUG
 
-int validateDatabase(const char name[],Weight catWeight) {
+int validateDatabase(const char name[], Weight catWeight) {
     if ((catWeight < 0) | (currentNumCats > 9) | (strlen(name) > MAX_NAME) | (strlen(name) == 0))
     {
         fprintf(stderr, "[%s]:\nCat name must be greater than 0 and less than 30.\nCat weight must be greater than zero\nThe number of Cats submiited into database\nmay not exceed 10\n", PROGRAM_NAME);
