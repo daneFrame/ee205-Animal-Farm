@@ -27,7 +27,6 @@ void deleteAllCats()
         catDeetsArray[i].collarColor1 = NONE;
         catDeetsArray[i].collarColor2 = NONE;
         catDeetsArray[i].license = 0;
-
     }
     currentNumCats = 0;
 }

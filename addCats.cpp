@@ -41,12 +41,6 @@ int addCat(const char name[], enum gender catGender, enum breed catBreed, bool c
         catDeetsArray[currentNumCats].collarColor1 = collarColor1;
         catDeetsArray[currentNumCats].collarColor2 = collarColor2;
         catDeetsArray[currentNumCats].license = license;
-
-#ifdef DEBUG
-        printf("DEBUG: currentNumCats = %d\n", currentNumCats);
-        printf("DEBUG: one of the cat names is %s\n", catDeetsArray[currentNumCats].Name);
-#endif
-
     }
 
     return currentNumCats++;

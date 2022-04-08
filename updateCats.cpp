@@ -10,16 +10,22 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include<stdio.h>
 #include<string.h>
+#include<iostream>
 
 #include "config.h"
 #include "updateCats.h"
 #include "catDatabase.h"
 
+using namespace std;
+
 void updateCatName(int index, const char newName[])
 {
     if(strlen(newName) < 1 || strlen(newName) > MAX_NAME)
     {
-        printf("ERROR:\nCat name must be greater than 0 and less than 30.\nCat weight must be greater than zero\nThe number of Cats submiited into database\nmay not exceed 10\n");
+        //printf("ERROR:\nCat name must be greater than 0 and less than 30.\nCat weight must be greater than zero\nThe number of Cats submitted into database\nmay not exceed 10\n");
+        cout << "ERROR: Cat name must be greater than 0 and less than 30. Cat weight must be greater than zero" << endl;
+        cout << "The number of cats submitted into database" << endl;
+        cout << "may not exceed 10" << endl;
     }
     for(int index; index < MAX_CATS; index++)
     {
