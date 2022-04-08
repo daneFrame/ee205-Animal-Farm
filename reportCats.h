@@ -11,7 +11,7 @@
 #pragma once
 #include "catDatabase.h"
 #include "addCats.h"
+
 extern void printCat(int index);
-//extern void printCat(int index, int currentNumCats)
 extern void printAllCats();
 extern int findCat(const char name[]);
