@@ -20,7 +20,7 @@ void deleteAllCats()
     {
         memset(catDeetsArray[i].Name, 0, MAX_CATS);
 
-        catDeetsArray[i].Gender = UNKOWN_GENDER;
+        catDeetsArray[i].Gender = UNKNOWN_GENDER;
         catDeetsArray[i].weight = 0;
         catDeetsArray[i].Breed = UNKNOWN_BREED;
         catDeetsArray[i].isFixed = 0;

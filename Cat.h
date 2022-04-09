@@ -11,6 +11,7 @@
 #pragma once
 
 #include<iostream>
+#include<stdexcept>
 
 #include "addCats.h"
 #include "catDatabase.h"

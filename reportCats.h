@@ -9,9 +9,14 @@
 /// @date   DAY_MON_YEAR
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
+
 #include "catDatabase.h"
 #include "addCats.h"
+#include "Cat.h"
 
-extern void printCat(int index);
+//extern void printCat(int index);
 extern void printAllCats();
-extern int findCat(const char name[]);
+//extern int findCat(const char name[]);
+extern Cat* findCatByName(const char* name);
+extern const char* genderName(enum gender Gender);
+extern const char* breedName(enum breed Breed);
