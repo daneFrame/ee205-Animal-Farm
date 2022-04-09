@@ -33,9 +33,9 @@ int addCat(const char name[], enum gender catGender, enum breed catBreed, bool c
 
     if (validateDatabase(name, catWeight))
     {
-        strcpy(catDeetsArray[currentNumCats].Name, name);
-        catDeetsArray[currentNumCats].weight = catWeight;
-        catDeetsArray[currentNumCats].Gender = catGender;
+        //strcpy(catDeetsArray[currentNumCats].Name, name);
+        //catDeetsArray[currentNumCats].weight = catWeight;
+        //catDeetsArray[currentNumCats].Gender = catGender;
         catDeetsArray[currentNumCats].Breed = catBreed;
         catDeetsArray[currentNumCats].isFixed = catFixed;
         catDeetsArray[currentNumCats].collarColor1 = collarColor1;
