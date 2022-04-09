@@ -21,12 +21,12 @@
 typedef int NumCats;
 
 extern NumCats currentNumCats;
-enum gender {UNKNOWN_GENDER, MALE, FEMALE};
-enum breed {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
-enum Color {NONE, WHITE, BLACK, BLUE};
+//enum gender {UNKNOWN_GENDER, MALE, FEMALE};
+//enum breed {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
+//enum Color {NONE, WHITE, BLACK, BLUE};
 
-typedef float weight;
-const weight UNKNOWN_WEIGHT = -1 ;
+//typedef float weight;
+//const weight UNKNOWN_WEIGHT = -1 ;
 
 //struct catDeets{
     //float weight;
