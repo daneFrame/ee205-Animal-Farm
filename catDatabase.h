@@ -21,28 +21,28 @@
 typedef int NumCats;
 
 extern NumCats currentNumCats;
-enum gender {UNKNOWN_GENDER, MALE, FEMALE};
-enum breed {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
-enum Color {NONE, WHITE, BLACK, BLUE};
+//enum gender {UNKNOWN_GENDER, MALE, FEMALE};
+//enum breed {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
+//enum Color {NONE, WHITE, BLACK, BLUE};
 
 typedef float Weight;
 const Weight UNKNOWN_WEIGHT = -1 ;
 
-struct catDeets{
+//struct catDeets{
     //float weight;
-    Weight weight;
-    enum gender Gender;
-    enum breed Breed;
-    char Name[MAX_NAME];
-    bool isFixed;
-    enum Color collarColor1;
-    enum Color collarColor2;
-    unsigned long long license;
-};
+  //  Weight weight;
+    //enum gender Gender;
+    //enum breed Breed;
+    //char Name[MAX_NAME];
+    //bool isFixed;
+    //enum Color collarColor1;
+    //enum Color collarColor2;
+    //unsigned long long license;
+//};
 
 extern struct catDeets catDeetsArray[];
 
-extern Cat* cdbHeadPtr;
+extern Cat* catDatabaseHeadPtr;
 
 extern void initialize();
 

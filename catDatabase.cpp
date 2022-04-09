@@ -9,10 +9,56 @@
 /// @date   DAY_MON_YEAR
 ///////////////////////////////////////////////////////////////////////////////
 #include<stdbool.h>
+#include <cassert>
+
+
 #include "addCats.h"
 #include "catDatabase.h"
 #include "config.h"
+#include "reportCats.h"
 
-struct catDeets catDeetsArray[MAX_CATS];
+using namespace std;
+
+//struct catDeets catDeetsArray[MAX_CATS];
 
 int currentNumCats;
+
+Cat* catDatabaseHeadPtr = nullptr;
+
+void initialize(){
+    if(catDatabaseHeadPtr != nullptr){
+        throw logic_error(PROGRAM_NAME ": delete the old database first, yo.");
+    }
+    assert(validateDatabase());
+}
+
+bool isCatPresent(const Cat* aCat){
+    assert(aCat != nullptr);
+    assert(validateDatabase());
+    for(Cat* iCat = catDatabaseHeadPtr; iCat != nullptr; iCat = iCat->next){
+        if(iCat == aCat){
+            return true;
+        }
+    }
+    assert(validateDatabase());
+    return false;
+}
+
+extern bool validateDatabase(){
+    int validCats = 0;
+    for(Cat* iCat = catDatabaseHeadPtr; iCat != nullptr; iCat = iCat->next){
+        if(!iCat->validate()){
+            return false;
+        }
+        Cat* foundCat = findCatByName(iCat->getName());
+        if(foundCat != iCat){
+            cout << PROGRAM_NAME ": Warning: Duplicate cat name [" << iCat->getName() << "j" << endl;
+        }
+        validCats++;
+    }
+    if(validCats != currentNumCats){
+        cout << PROGRAM_NAME << ": Error: currentNumCats [" << currentNumCats << "] does not equal [" << validCats << "]" << endl;
+        return false;
+    }
+    return true;
+}
