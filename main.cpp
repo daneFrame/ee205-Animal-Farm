@@ -28,6 +28,8 @@ using namespace std;
 
 int main() {
     cout << "Starting " << PROGRAM_TITLE << endl ;
+
+    initialize();
 //#ifdef DEBUG
   //  addCat( "Christina", FEMALE, MAINE_COON, false, 8.8, BLUE, BLACK,69 );
     //addCat( "Dane", MALE, SPHYNX, false, 235, BLUE, WHITE, 666);
@@ -46,13 +48,13 @@ int main() {
     //fixCat(0); //fixes christina
     //printCat(4); //prints cat data (need to get this to fail)
 
-    //printAllCats(); //for comfirming name changes
+    printAllCats(); //for comfirming name changes
     //printf("DEBUG: ALL CAT INFO AFTER THIS SHOULD BE EMPTY\n");
-    //deleteAllCats();
+    deleteAllCats();
     //printCat(0);
     //printCat(1); //confirms individual data has been deleted
     //printCat(2);
-    //printAllCats(); //confirms all cats have been deleted
+    printAllCats(); //confirms all cats have been deleted
     cout << "Done with " << PROGRAM_TITLE << endl ;
     //#endif
 }

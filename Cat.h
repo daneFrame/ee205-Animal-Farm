@@ -15,6 +15,7 @@
 
 #include "addCats.h"
 #include "catDatabase.h"
+#include "updateCats.h"
 
 using namespace std;
 
