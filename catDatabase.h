@@ -16,11 +16,11 @@
 #include "Cat.h"
 
 #define MAX_CATS 10
-#define MAX_NAME 50
+//#define MAX_NAME 50
 
-typedef int NumCats;
+//typedef int NumCats;
 
-extern NumCats currentNumCats;
+extern int currentNumCats;
 //enum gender {UNKNOWN_GENDER, MALE, FEMALE};
 //enum breed {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 //enum Color {NONE, WHITE, BLACK, BLUE};
@@ -40,7 +40,7 @@ extern NumCats currentNumCats;
     //unsigned long long license;
 //};
 
-extern struct catDeets catDeetsArray[];
+//extern struct catDeets catDeetsArray[];
 
 extern Cat* catDatabaseHeadPtr;
 

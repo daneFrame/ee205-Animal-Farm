@@ -8,16 +8,18 @@
 /// @author Dane Sears <dsears@hawaii.edu>
 /// @date   08_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
-#include<stdio.h>
-#include<string.h>
+//#include<stdio.h>
+//#include<string.h>
 #include<stdbool.h>
 #include<iostream>
 #include<cassert>
+#include <cstring>
 
 #include "config.h"
 #include "reportCats.h"
 #include "catDatabase.h"
-#include "addCats.h"
+//#include "addCats.h"
+#include "Cat.h"
 
 #define DEBUG
 
@@ -51,10 +53,11 @@ bool printAllCats(){
         iCat->print();
         currentNumCats++;
     }
+    assert(validateDatabase());
     return true;
 }
 
-Cat* findCat(const char name[]){
+Cat* findCat(const char* name){
     //for (int index = 0; index < MAX_CATS; index++)
     //{
       //  if ( strcmp(catDeetsArray[index].Name, name) == 0){
@@ -81,10 +84,10 @@ const char* genderName(const enum gender Gender){
         case FEMALE: return "Female";
         case MALE: return "Male";
     }
-    throw logic_error(PROGRAM_NAME ": gender name not recognized")
+    throw logic_error(PROGRAM_NAME ": gender name not recognized");
 }
 
-const char* breedName(const enum Breed breed){
+const char* breedName(const enum breed Breed){
     switch(Breed){
         case UNKNOWN_BREED: return "Unknown";
         case MAINE_COON: return "Maine Coon";

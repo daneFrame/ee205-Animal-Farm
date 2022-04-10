@@ -14,9 +14,11 @@
 #include<stdexcept>
 
 #include "config.h"
-#include "addCats.h"
-#include "catDatabase.h"
-#include "updateCats.h"
+//#include "addCats.h"
+//#include "catDatabase.h"
+//#include "updateCats.h"
+
+#define MAX_NAME 50
 
 using namespace std;
 
@@ -25,9 +27,9 @@ using namespace std;
 
 class Cat {
 protected:
-    enum gender catGender;
-    enum breed catBreed;
-    Weight catWeight;
+    enum gender Gender;
+    enum breed Breed;
+    Weight weight;
     bool catFixed;
     char name[MAX_NAME];
 

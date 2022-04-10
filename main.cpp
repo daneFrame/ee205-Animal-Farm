@@ -18,12 +18,12 @@
 #include "catDatabase.h"
 #include "addCats.h"
 #include "reportCats.h"
-#include "updateCats.h"
+//#include "updateCats.h"
 #include "deleteCats.h"
 #include "config.h"
 #include "Cat.h"
 
-#define PROGRAM_TITLE "Animal Farm"
+//#define PROGRAM_TITLE "Animal Farm"
 //#define DEBUG //tests/shows usability of animalFarm
 
 using namespace std;

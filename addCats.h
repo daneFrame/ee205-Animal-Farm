@@ -11,7 +11,7 @@
 #pragma once
 
 #include "Cat.h"
-#include "catDatabase.h"
+//#include "catDatabase.h"
 
 extern bool addCat(Cat* newCat);
 

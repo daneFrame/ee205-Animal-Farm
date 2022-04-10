@@ -22,11 +22,11 @@ using namespace std;
 
 void Cat::zeroProtocol() {
     memset(name, 0, MAX_NAME);
-    catGender = UNKNOWN_GENDER;
-    catBreed = UNKNOWN_BREED;
+    Gender = UNKNOWN_GENDER;
+    Breed = UNKNOWN_BREED;
     catFixed = false;
     next = nullptr;
-    catWeight = UNKNOWN_WEIGHT;
+    weight = UNKNOWN_WEIGHT;
 }
 
 Cat::Cat() {
@@ -57,11 +57,11 @@ void Cat::setName(const char *newName) {
 }
 
 gender Cat::getGender() const noexcept {
-    return catGender;
+    return Gender;
 }
 
 breed Cat::getBreed() const noexcept {
-    return catBreed;
+    return Breed;
 }
 
 bool Cat::isFixed() const noexcept {
@@ -69,7 +69,7 @@ bool Cat::isFixed() const noexcept {
 }
 
 Weight Cat::getWeight() const noexcept {
-    return catWeight;
+    return weight;
 }
 
 #define FORMAT_LINE(className, member) cout << setw(8) << ( className ) << setw(20) << member << setw(52)
@@ -91,9 +91,9 @@ bool Cat::print() const noexcept {
 bool Cat::validate() const noexcept {
     try {
         validateName(name);
-        validateGender(catGender);
-        validateBreed(catBreed);
-        validateWeight(catWeight);
+        validateGender(Gender);
+        validateBreed(Breed);
+        validateWeight(weight);
     } catch (exception const& e) {
         cout << e.what() << endl;
         return false;
@@ -141,7 +141,7 @@ void Cat::fixCat() noexcept {
 
 void Cat::setWeight(Weight newWeight) {
     validateWeight(newWeight);
-    Cat::catWeight = newWeight;
+    Cat::weight = newWeight;
 }
 
 void Cat::setGender(gender newGender) {
@@ -149,7 +149,7 @@ void Cat::setGender(gender newGender) {
         throw logic_error(PROGRAM_NAME ": gender is already set and cannot be changed.");
     }
     validateGender(newGender);
-    Cat::catGender == newGender;
+    Cat::Gender == newGender;
 }
 
 void Cat::setBreed(breed newBreed) {
