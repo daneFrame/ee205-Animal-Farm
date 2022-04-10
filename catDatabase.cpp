@@ -21,7 +21,7 @@ using namespace std;
 
 //struct catDeets catDeetsArray[MAX_CATS];
 
-int currentNumCats;
+int currentNumCats = 0;
 
 Cat* catDatabaseHeadPtr = nullptr;
 
@@ -50,9 +50,9 @@ extern bool validateDatabase(){
         if(!iCat->validate()){
             return false;
         }
-        Cat* foundCat = findCatByName(iCat->getName());
+        Cat* foundCat = findCat(iCat->getName());
         if(foundCat != iCat){
-            cout << PROGRAM_NAME ": Warning: Duplicate cat name [" << iCat->getName() << "j" << endl;
+            cout << PROGRAM_NAME ": Warning: duplicate cat name [" << iCat->getName() << "]" << endl;
         }
         validCats++;
     }
