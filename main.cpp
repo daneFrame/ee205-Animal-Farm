@@ -29,7 +29,7 @@
 
 #define LARGE_NAME "00000000010000000002000000000300000000040000000005"
 #define TOO_LARGE  "000000000100000000020000000003000000000400000000050"
-//#define DEBUG //tests/shows usability of animalFarm
+#define DEBUG //tests/shows usability of animalFarm
 
 using namespace std;
 
@@ -82,8 +82,7 @@ int main() {
 
     try {
         testCat.setName(nullptr);
-        //testCat.setName("");
-        //testCat.setName("A");
+
         assert(false);
     } catch (exception const &e) {}
 cout << "Name to nullptr test: PASS" << endl;
@@ -96,7 +95,7 @@ cout << "Name to nullptr test: PASS" << endl;
  //   testCat.setName("");
     //try {
       //  testCat.setWeight(2);
-        //assert(false); // We should never get here
+        //assert(false);
     //} catch (exception const &e) {}
 
     try{
@@ -111,7 +110,7 @@ cout << "Name to nullptr test: PASS" << endl;
 
     try {
         testCat.setName(TOO_LARGE);
-        assert(false); // We should never get here
+        assert(false);
     } catch (exception const &e) {}
 
         cout << "Name too large test: PASS" << endl;
