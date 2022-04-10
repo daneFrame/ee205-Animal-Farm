@@ -6,11 +6,14 @@
 /// @version 1.0
 ///
 /// @author Dane Sears <dsears@hawaii.edu>
-/// @date   DAY_MON_YEAR
+/// @date   09_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
+
+#include "Cat.h"
 #include "catDatabase.h"
 
+extern bool addCat(Cat* newCat);
 
-extern int addCat(const char name[], enum gender catGender, enum breed catBreed, bool catFixed,Weight Weight,
-        enum Color collarColor1, enum Color collarColor2, unsigned long long license);
+//extern int addCat(const char name[], enum gender catGender, enum breed catBreed, bool catFixed,Weight Weight,
+  //      enum Color collarColor1, enum Color collarColor2, unsigned long long license);
