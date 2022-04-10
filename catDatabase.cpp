@@ -21,7 +21,7 @@ using namespace std;
 
 //struct catDeets catDeetsArray[MAX_CATS];
 
-int currentNumCats = 0;
+int currentNumCats;
 
 Cat* catDatabaseHeadPtr = nullptr;
 

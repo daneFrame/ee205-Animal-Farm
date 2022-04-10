@@ -6,7 +6,7 @@
 /// @version 1.0
 ///
 /// @author Dane Sears <dsears@hawaii.edu>
-/// @date   DAY_MON_YEAR
+/// @date   09_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 

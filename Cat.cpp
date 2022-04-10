@@ -16,7 +16,7 @@
 
 #include "reportCats.h"
 #include "Cat.h"
-#include "config.h"
+//#include "config.h"
 
 using namespace std;
 
@@ -39,7 +39,7 @@ Cat::Cat(const char *newName, const gender newGender, const breed newBreed, cons
     setBreed(newBreed);
     setWeight(newWeight);
 
-    assert(validate());
+//    assert(validate());
 }
 
 Cat::~Cat() {
@@ -60,12 +60,12 @@ gender Cat::getGender() const noexcept {
     return Gender;
 }
 
-bool Cat::validateGender(const gender newGender) {
-    if(newGender == UNKNOWN_GENDER) {
-        throw invalid_argument(PROGRAM_NAME ": gender must be known");
-    }
-    return true;
-}
+//bool Cat::validateGender(const gender newGender) {
+  //  if(newGender == UNKNOWN_GENDER) {
+    //    throw invalid_argument(PROGRAM_NAME ": gender must be known");
+    //}
+    //return true;
+//}
 
 breed Cat::getBreed() const noexcept {
     return Breed;
@@ -88,8 +88,8 @@ bool Cat::print() const noexcept {
     cout << left;
     cout << boolalpha;
     FORMAT_LINE("Cat","name") << getName() << endl;
-    FORMAT_LINE("Cat","gender") << getGender() << endl;
-    FORMAT_LINE("Cat","breed") << getBreed() << endl;
+    FORMAT_LINE("Cat","gender") << genderName(getGender()) << endl;
+    FORMAT_LINE("Cat","breed") << breedName(getBreed()) << endl;
     FORMAT_LINE("Cat", "isFixed") << isFixed() << endl;
     FORMAT_LINE("Cat","weight") << getWeight() << endl;
     return true;
@@ -121,12 +121,12 @@ bool Cat::validateName(const char *newName) {
 return true;
 }
 
-//bool Cat::validateGender(const gender newGender) {
-  //  if(newGender == UNKNOWN_GENDER) {
-    //    throw invalid_argument(PROGRAM_NAME ": gender must be known");
-   // }
-//return true;
-//}
+bool Cat::validateGender(const gender newGender) {
+    if(newGender == UNKNOWN_GENDER) {
+        throw invalid_argument(PROGRAM_NAME ": gender must be known");
+    }
+return true;
+}
 
 bool Cat::validateBreed(const breed newBreed) {
     if(newBreed == UNKNOWN_BREED){
@@ -156,7 +156,7 @@ void Cat::setGender(gender newGender) {
         throw logic_error(PROGRAM_NAME ": gender is already set and cannot be changed.");
     }
     validateGender(newGender);
-    Cat::Gender == newGender;
+    Cat::Gender = newGender;
 }
 
 void Cat::setBreed(breed newBreed) {

@@ -10,9 +10,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 
-#include "catDatabase.h"
-#include "addCats.h"
+//#include "catDatabase.h"
+//#include "addCats.h"
 #include "Cat.h"
+#include "config.h"
 
 //extern void printCat(int index);
 extern bool printAllCats();

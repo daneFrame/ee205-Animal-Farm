@@ -9,15 +9,17 @@
 /// @date   09_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <stdbool.h>
+//#include <string.h>
+#include<iostream>
 
 #include "addCats.h"
 #include "catDatabase.h"
 #include "config.h"
 #include <cassert>
+
 #define DEBUG
 
 using namespace std;
@@ -51,14 +53,10 @@ using namespace std;
 bool addCat(Cat* newCat){
     assert(newCat != nullptr);
     newCat->validate();
-    if(isCatPresent(newCat)){
-        throw logic_error(PROGRAM_NAME ": cat is already present!");
-    }
-
-    assert(validateDatabase());
+    //assert(validateDatabase());
     newCat->next = catDatabaseHeadPtr;
     catDatabaseHeadPtr = newCat;
     currentNumCats++;
-    assert(validateDatabase());
+    //assert(validateDatabase());
     return true;
 }
