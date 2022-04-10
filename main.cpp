@@ -65,7 +65,7 @@ int main() {
     result = addCat(new Cat( "Chili", MALE, SHORTHAIR, 1.5 )) ;
     assert(result);
 
-    printAllCats(); //for comfirming name changes
+    printAllCats(); //for confirming name changes
     //printf("DEBUG: ALL CAT INFO AFTER THIS SHOULD BE EMPTY\n");
     deleteAllCats();
     //printCat(0);
