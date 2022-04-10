@@ -60,6 +60,13 @@ gender Cat::getGender() const noexcept {
     return Gender;
 }
 
+bool Cat::validateGender(const gender newGender) {
+    if(newGender == UNKNOWN_GENDER) {
+        throw invalid_argument(PROGRAM_NAME ": gender must be known");
+    }
+    return true;
+}
+
 breed Cat::getBreed() const noexcept {
     return Breed;
 }
@@ -114,12 +121,12 @@ bool Cat::validateName(const char *newName) {
 return true;
 }
 
-bool Cat::validateGender(const gender newGender) {
-    if(newGender == UNKNOWN_GENDER) {
-        throw invalid_argument(PROGRAM_NAME ": gender must be known");
-    }
-return true;
-}
+//bool Cat::validateGender(const gender newGender) {
+  //  if(newGender == UNKNOWN_GENDER) {
+    //    throw invalid_argument(PROGRAM_NAME ": gender must be known");
+   // }
+//return true;
+//}
 
 bool Cat::validateBreed(const breed newBreed) {
     if(newBreed == UNKNOWN_BREED){
