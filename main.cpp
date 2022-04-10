@@ -13,6 +13,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <cassert>
 
 #include "catDatabase.h"
 #include "addCats.h"
@@ -20,6 +21,7 @@
 #include "updateCats.h"
 #include "deleteCats.h"
 #include "config.h"
+#include "Cat.h"
 
 #define PROGRAM_TITLE "Animal Farm"
 //#define DEBUG //tests/shows usability of animalFarm
@@ -48,6 +50,21 @@ int main() {
     //fixCat(0); //fixes christina
     //printCat(4); //prints cat data (need to get this to fail)
 
+    bool result ;
+    result = addCat(new Cat( "Loki", MALE, PERSIAN, 1.0 ));
+    assert(result);
+    if(!result) throw logic_error (PROGRAM_NAME ": addCat() failed");
+    result = addCat(new Cat( "Milo", MALE, MANX , 1.1 )) ;
+    assert(result);
+    result = addCat(new Cat( "Bella", FEMALE, MAINE_COON, 1.2 )) ;
+    assert(result);
+    result = addCat(new Cat( "Kali", FEMALE, SHORTHAIR, 1.3 )) ;
+    assert(result);
+    result = addCat(new Cat( "Trin", FEMALE, MANX, 1.4 )) ;
+    assert(result);
+    result = addCat(new Cat( "Chili", MALE, SHORTHAIR, 1.5 )) ;
+    assert(result);
+
     printAllCats(); //for comfirming name changes
     //printf("DEBUG: ALL CAT INFO AFTER THIS SHOULD BE EMPTY\n");
     deleteAllCats();
@@ -57,4 +74,5 @@ int main() {
     printAllCats(); //confirms all cats have been deleted
     cout << "Done with " << PROGRAM_TITLE << endl ;
     //#endif
+    return EXIT_SUCCESS;
 }

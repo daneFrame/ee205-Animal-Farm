@@ -13,6 +13,7 @@
 #include<iostream>
 #include<stdexcept>
 
+#include "config.h"
 #include "addCats.h"
 #include "catDatabase.h"
 #include "updateCats.h"

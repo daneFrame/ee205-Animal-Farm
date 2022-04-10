@@ -8,12 +8,12 @@
 /// @author Dane Sears <dsears@hawaii.edu>
 /// @date   DAY_MON_YEAR
 ///////////////////////////////////////////////////////////////////////////////
-#pragma once
-#include "catDatabase.h"
+//#pragma once
+//#include "catDatabase.h"
 
-extern void updateCatName(int index, const char newName[]);
-extern void fixCat(int index);
-extern void updateCatWeight(int index, Weight newWeight);
-extern void updateCollarColor1(int index, enum Color newCollarColor1);
-extern void updateCollarColor2(int index, enum Color newCollarColor2);
-extern void updateCatLicense(int index, unsigned long long newLicense);
+//extern void updateCatName(int index, const char newName[]);
+//extern void fixCat(int index);
+//extern void updateCatWeight(int index, Weight newWeight);
+//extern void updateCollarColor1(int index, enum Color newCollarColor1);
+//extern void updateCollarColor2(int index, enum Color newCollarColor2);
+//extern void updateCatLicense(int index, unsigned long long newLicense);

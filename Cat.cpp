@@ -94,8 +94,7 @@ bool Cat::validate() const noexcept {
         validateGender(catGender);
         validateBreed(catBreed);
         validateWeight(catWeight);
-    }
-    catch (exception const& e) {
+    } catch (exception const& e) {
         cout << e.what() << endl;
         return false;
     }
@@ -109,7 +108,7 @@ bool Cat::validateName(const char *newName) {
     if(strlen(newName) >= MAX_NAME){
         throw length_error(PROGRAM_NAME ": name must be less than MAX_NAME");
     }
-    if(strlen(newName <= 0)){
+    if(strlen(newName) <= 0){
         throw length_error(PROGRAM_NAME ": name must be of greater length than 0");
     }
 return true;
@@ -147,7 +146,7 @@ void Cat::setWeight(Weight newWeight) {
 
 void Cat::setGender(gender newGender) {
     if(Gender != UNKNOWN_GENDER){
-        throw logic_error(PROGRAM_NAME ": The gender is already set and cannot be changed.");
+        throw logic_error(PROGRAM_NAME ": gender is already set and cannot be changed.");
     }
     validateGender(newGender);
     Cat::catGender == newGender;
@@ -155,7 +154,7 @@ void Cat::setGender(gender newGender) {
 
 void Cat::setBreed(breed newBreed) {
     if(Breed != UNKNOWN_BREED){
-        throw logic_error(PROGRAM_NAME ": The breed must be known.");
+        throw logic_error(PROGRAM_NAME ": breed is already set and cannot be changed.");
     }
     validateBreed(newBreed);
     Cat::Breed = newBreed;
