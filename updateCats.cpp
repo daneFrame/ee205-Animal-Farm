@@ -9,12 +9,12 @@
 /// @date   DAY_MON_YEAR
 ///////////////////////////////////////////////////////////////////////////////
 //#include<stdio.h>
-#include<string.h>
-#include<iostream>
+//#include<string.h>
+//#include<iostream>
 
-#include "config.h"
-#include "updateCats.h"
-#include "catDatabase.h"
+//#include "config.h"
+//#include "updateCats.h"
+//#include "catDatabase.h"
 
 //using namespace std;
 
