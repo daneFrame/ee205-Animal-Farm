@@ -52,7 +52,7 @@ return true;
 }
 return false;
 }
-///static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
+
 float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept {
 switch(fromUnit){
 case POUND:
@@ -127,7 +127,6 @@ return convertedWeight;
 }
 
 float Weight::getMaxWeight() const noexcept {
-///if(!isWeightKnown())
 if(validate()) {
 return maxWeight;
 }else{
@@ -138,15 +137,6 @@ return UNKNOWN_WEIGHT;
 void Weight::setMaxWeight(float newMaxWeight) {
     maxWeight = newMaxWeight;
 }
-
-///bool Weight::isWeightValid(float checkWeight) const noexcept {
-/////  assert( (checkWeight > 0) || checkWeight == UNKNOWN_WEIGHT );
-///if( bHasMax ){
-////  assert( checkWeight <= maxWeight );
-///}
-///return true;
-///}
-
 
 Weight::Weight(float newWeight, float newMaxWeight) {
     bIsKnown = false;

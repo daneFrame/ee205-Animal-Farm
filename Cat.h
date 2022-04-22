@@ -14,16 +14,12 @@
 #include<stdexcept>
 
 #include "config.h"
-//#include "addCats.h"
-//#include "catDatabase.h"
-//#include "updateCats.h"
 
 #define MAX_NAME 50
 
 using namespace std;
 
-//#ifndef EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_CAT_H
-//#define EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_CAT_H
+class string;
 
 class Cat {
 protected:
@@ -31,7 +27,8 @@ protected:
     enum breed Breed;
     Weight weight;
     bool catFixed;
-    char name[MAX_NAME];
+    //char name[MAX_NAME];
+    std::string name;
 
 public:
     Cat* next;
@@ -42,12 +39,16 @@ private:
 public:
     Cat();
 
-    Cat(const char *newName, const gender newGender, const breed newBreed, const Weight newWeight);
+    Cat(std::string *newName, const gender newGender, const breed newBreed, const Weight newWeight);
+
+
+    //Cat(const char *newName, const gender newGender, const breed newBreed, const Weight newWeight);
 
     virtual ~Cat();
 
 public:
-    const char *getName() const noexcept;
+    //const char *getName() const noexcept;
+    std::string *getName() const noexcept;
     void setName(const char* newName);
     gender getGender() const noexcept;
     breed getBreed() const noexcept;
@@ -66,10 +67,9 @@ public:
     bool validate() const noexcept;
 
 public:
-    static bool validateName(const char* newName);
+    //static bool validateName(const char* newName);
+    static bool validateName(std::string newName);
     static bool validateGender(const gender newGender);
     static bool validateBreed(const breed newBreed);
     static bool validateWeight(const Weight newWeight);
 };
-
-//#endif //EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_CAT_H

@@ -16,7 +16,6 @@
 
 #include "reportCats.h"
 #include "Cat.h"
-//#include "config.h"
 
 using namespace std;
 
@@ -38,17 +37,19 @@ Cat::Cat(const char *newName, const gender newGender, const breed newBreed, cons
     setGender(newGender);
     setBreed(newBreed);
     setWeight(newWeight);
-
-//    assert(validate());
 }
 
 Cat::~Cat() {
     zeroProtocol();
 }
 
-const char *Cat::getName() const noexcept {
-    return name;
+std::string *Cat::getName() const noexcept {
+return name;
 }
+
+//const char *Cat::getName() const noexcept {
+//    return name;
+//}
 
 void Cat::setName(const char *newName) {
     validateName(newName);
@@ -59,13 +60,6 @@ void Cat::setName(const char *newName) {
 gender Cat::getGender() const noexcept {
     return Gender;
 }
-
-//bool Cat::validateGender(const gender newGender) {
-  //  if(newGender == UNKNOWN_GENDER) {
-    //    throw invalid_argument(PROGRAM_NAME ": gender must be known");
-    //}
-    //return true;
-//}
 
 breed Cat::getBreed() const noexcept {
     return Breed;
@@ -108,7 +102,9 @@ bool Cat::validate() const noexcept {
     return true;
 }
 
-bool Cat::validateName(const char *newName) {
+//bool Cat::validateName(const char *newName) {
+bool Cat::validateName(std::string *newName) {
+
     if(newName == nullptr) {
         throw invalid_argument(PROGRAM_NAME ": name must not be NULL");
     }

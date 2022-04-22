@@ -14,6 +14,7 @@
 #include "config.h"
 
 extern bool printAllCats();
-extern Cat* findCat(const char* name);
+//extern Cat* findCat(const char* name);
+extern Cat* findCat(std::string name);
 extern const char* genderName(enum gender Gender);
 extern const char* breedName(enum breed Breed);

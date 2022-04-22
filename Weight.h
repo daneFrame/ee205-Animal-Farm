@@ -13,14 +13,9 @@
 
 using namespace std;
 
-///float maxWeight;
-
 class Weight {
 public:  ////////////// Enumerations //////////////
     /// A unit of measure for weight
-    // static const std::string POUND_LABEL = "Pound" ;
-//static const std::string KILO_LABEL = "Kilo";
-//static const std::string SLUG_LABEL = "Slug";
 
     static float fromKilogramToPound(float kilogram) noexcept;
     static float fromPoundToKilogram(float pound) noexcept;
@@ -32,10 +27,6 @@ public:  ////////////// Enumerations //////////////
     };
 
     enum UnitOfWeight unitOfWeight;
-
-//private:
-    //  bool bIsKnown;
-    //bool bHasMax;
 
 public:
     float weightInPounds;
@@ -74,20 +65,8 @@ public:
     void setMaxWeight(float newMaxWeight);
     void dump() const noexcept;
 
-    //bool isWeightValid(float checkWeight, float maxWeight);
     bool isWeightValid(float checkWeight) const;
 
 public:
     static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
-
-    ///float getWeight(UnitOfWeight weightUnits);
 };
-
-
-
-
-
-//float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept {
-
-//}
-

@@ -47,14 +47,14 @@ for(Cat* iCat = catDatabaseHeadPtr; iCat != nullptr; iCat = iCat->next){
 return nullptr;
 }
 
-const char* genderName(const enum gender Gender){
-    switch(Gender){
-        case UNKNOWN_GENDER: return "Unknown";
-        case FEMALE: return "Female";
-        case MALE: return "Male";
-    }
-    throw logic_error(PROGRAM_NAME ": gender name not recognized");
-}
+//const char* genderName(const enum gender Gender){
+//    switch(Gender){
+//        case UNKNOWN_GENDER: return "Unknown";
+//        case FEMALE: return "Female";
+//        case MALE: return "Male";
+//    }
+//    throw logic_error(PROGRAM_NAME ": gender name not recognized");
+//}
 
 const char* breedName(const enum breed Breed){
     switch(Breed){
