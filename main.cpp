@@ -37,23 +37,7 @@ int main() {
     cout << "Starting " << PROGRAM_TITLE << endl ;
 
     initialize();
-//#ifdef DEBUG
-  //  addCat( "Christina", FEMALE, MAINE_COON, false, 8.8, BLUE, BLACK,69 );
-    //addCat( "Dane", MALE, SPHYNX, false, 235, BLUE, WHITE, 666);
-    //addCat( "Tom", MALE, MAINE_COON, true, 170, WHITE, BLACK, 1350);// name, sex, type, fixed, weight
-    //printAllCats(); //print all initial names
-    //printCat(0); //print Christina info
-    //printCat(1); //print Dane info
-    //printCat(2); //print Tom info
 
-    //findCat("Dan"); //find Dane's place in the index (should fail with Dan
-    //updateCatName(1, "Danus Torbalds");
-    //updateCatLicense(1, 88);
-    //updateCollarColor1(1, BLACK);
-    //updateCollarColor2(1, BLACK);
-    //printCat(1); //checks that update cats is working
-    //fixCat(0); //fixes christina
-    //printCat(4); //prints cat data (need to get this to fail)
 
     bool result ;
     result = addCat(new Cat( "Loki", MALE, PERSIAN, 1.0 ));
@@ -92,11 +76,6 @@ cout << "Name to nullptr test: PASS" << endl;
         assert(false);
     } catch (exception const &e) {}
    cout << "Empty Name Test: PASS" << endl;
- //   testCat.setName("");
-    //try {
-      //  testCat.setWeight(2);
-        //assert(false);
-    //} catch (exception const &e) {}
 
     try{
         testCat.setName("D");
@@ -179,22 +158,10 @@ cout << "Name to nullptr test: PASS" << endl;
         //cout << "END OF TESTS" << endl;
     } catch (exception const &e) {}
 
-
-    //bella = nullptr;
-
-//    testCat.setName("");
-  //  testCat.setName("A");
-   // cout << "END OF TESTS" << endl;
 #endif
 
 
-    printAllCats(); //for confirming name changes
-    //printf("DEBUG: ALL CAT INFO AFTER THIS SHOULD BE EMPTY\n");
-    deleteAllCats();
-    //printCat(0);
-    //printCat(1); //confirms individual data has been deleted
-    //printCat(2);
-    printAllCats(); //confirms all cats have been deleted
+
     cout << "Done with " << PROGRAM_TITLE << endl ;
     //#endif
     return EXIT_SUCCESS;

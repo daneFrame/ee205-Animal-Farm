@@ -10,15 +10,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 
-//#include<stdbool.h>
 #include <cstddef>
 
 #include "Cat.h"
 
-#define MAX_CATS 10
-//#define MAX_NAME 50
-
-//typedef int NumCats;
 
 extern int currentNumCats;
 

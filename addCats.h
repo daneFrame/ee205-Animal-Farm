@@ -12,5 +12,4 @@
 
 #include "Cat.h"
 
-
 extern bool addCat(Cat* newCat);
