@@ -18,7 +18,9 @@ class Node {
     friend class SinglyLinkedList;
 virtual void dump() const{
 }
-virtual bool validate() const noexcept;
+virtual bool validate() const noexcept{
+    return true;
+}
 virtual bool operator>(const Node &rightSide){
     if (leftSide>rightSide){
         return true;
