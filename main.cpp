@@ -16,11 +16,6 @@
 #include <cassert>
 #include <cstring>
 
-#include "catDatabase.h"
-#include "addCats.h"
-#include "reportCats.h"
-//#include "updateCats.h"
-#include "deleteCats.h"
 #include "config.h"
 #include "Cat.h"
 
@@ -36,7 +31,7 @@ using namespace std;
 int main() {
     cout << "Starting " << PROGRAM_TITLE << endl ;
 
-    initialize();
+    //initialize();
 
 
     bool result ;
@@ -45,7 +40,7 @@ int main() {
     result = addCat(new Cat( "Milo", MALE, MANX , 1.1 )) ;
     result = addCat(new Cat( "Bella", FEMALE, MAINE_COON, 1.2 )) ;
     result = addCat(new Cat( "Kali", FEMALE, SHORTHAIR, 1.3 )) ;
-    result = addCat(new Cat( "Trin", FEMALE, MANX, 1.4 )) ;
+    result = addCat(new Cat( "Trin", FEMALE, MANX, 1.4 )1) ;
     result = addCat(new Cat( "Chili", MALE, SHORTHAIR, 1.5 )) ;
     assert(result);
 

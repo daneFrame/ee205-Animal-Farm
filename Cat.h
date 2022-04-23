@@ -27,7 +27,6 @@ protected:
     enum breed Breed;
     Weight weight;
     bool catFixed;
-    //char name[MAX_NAME];
     std::string name;
 
 public:
@@ -49,7 +48,8 @@ public:
 public:
     //const char *getName() const noexcept;
     std::string *getName() const noexcept;
-    void setName(const char* newName);
+    //void setName(const char* newName);
+    void setName(std::string* newName);
     gender getGender() const noexcept;
     breed getBreed() const noexcept;
     bool isFixed() const noexcept;

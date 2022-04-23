@@ -112,7 +112,6 @@ return bIsKnown;
 }
 
 bool Weight::validate() const noexcept {
-//float checkWeight;
 assert(validate());
 return true;
 }

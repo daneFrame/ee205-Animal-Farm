@@ -32,7 +32,14 @@ Cat::Cat() {
     zeroProtocol();
 }
 
-Cat::Cat(const char *newName, const gender newGender, const breed newBreed, const Weight newWeight) : Cat() {
+//Cat::Cat(const char *newName, const gender newGender, const breed newBreed, const Weight newWeight) : Cat() {
+  //  setName(newName);
+    //setGender(newGender);
+    //setBreed(newBreed);
+    //setWeight(newWeight);
+//}
+
+Cat::Cat(std::string newName, const gender newGender, const breed newBreed, const Weight newWeight) : Cat() {
     setName(newName);
     setGender(newGender);
     setBreed(newBreed);
@@ -51,7 +58,13 @@ return name;
 //    return name;
 //}
 
-void Cat::setName(const char *newName) {
+//void Cat::setName(const char *newName) {
+  //  validateName(newName);
+   // memset(name, 0, MAX_NAME);
+    //strcpy(name, newName);
+//}
+
+void Cat::setName(std::string *newName){
     validateName(newName);
     memset(name, 0, MAX_NAME);
     strcpy(name, newName);
