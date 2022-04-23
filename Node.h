@@ -17,16 +17,24 @@ class Node {
     friend class List;
     friend class SinglyLinkedList;
 virtual void dump() const{
-    FORMAT_LINE_FOR_DUMP( "Node", "this" ) << this << std::endl ;
-    FORMAT_LINE_FOR_DUMP( "Node", "next" ) << next << std::endl ;
 }
 virtual bool validate() const noexcept;
-virtual bool operator>(const Node &rightSide);
+virtual bool operator>(const Node &rightSide){
+    if (leftSide>rightSide){
+        return true;
+    }else{
+        return false;
+    }
+}
 static bool compareByAddress(const Node *node1, const Node *node2){
     if (node1>node2) {
         return true;
     }else{
         return false;
     }
+
 }
+
+protected:
+    Node* next= nullptr;
 };
