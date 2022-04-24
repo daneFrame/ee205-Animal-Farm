@@ -6,37 +6,24 @@
 /// @version 1.0
 ///
 /// @author Dane Sears <dsears@hawaii.edu>
-/// @date   DAY_MON_YEAR
+/// @date   24_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
-#pragma once
-
 #include <iostream>
+
 #include "config.h"
 
-class Node {
-    friend class List;
-    friend class SinglyLinkedList;
-virtual void dump() const{
-}
-virtual bool validate() const noexcept{
-    return true;
-}
-virtual bool operator>(const Node &rightSide){
-    if (leftSide>rightSide){
-        return true;
-    }else{
-        return false;
-    }
-}
-static bool compareByAddress(const Node *node1, const Node *node2){
-    if (node1>node2) {
-        return true;
-    }else{
-        return false;
-    }
 
-}
+class Node {
+friend class List;
+friend class SinglyLinkedList;
+
+public:
+    virtual void dump() const;
+    virtual bool validate() const noexcept;
+    virtual bool operator>(const Node &rightSide);
 
 protected:
-    Node* next= nullptr;
+    Node* next = nullptr;
+    static bool compareByAddress(const Node *node1, const Node *node2);
 };
+
