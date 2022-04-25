@@ -22,6 +22,8 @@ public:  ////////////// Enumerations //////////////
     static float fromSlugToPound(float slug) noexcept;
     static float fromPoundToSlug(float pound) noexcept;
 
+    typedef float t_weight;
+
     enum UnitOfWeight {
         POUND, KILO, SLUG
     };

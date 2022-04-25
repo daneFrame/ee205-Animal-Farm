@@ -9,6 +9,7 @@
 /// @date   24_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
 #include <stdexcept>
+#include <cassert>
 
 #include "List.h"
 #include "Node.h"
@@ -26,7 +27,16 @@ bool List::empty() const noexcept {
         return true;
 }
 
-void List::deleteAllNodes() noexcept {}
+void List::deleteAllNodes() noexcept {
+    assert( validate() );
+    while( head != nullptr ) {
+        pop_front();
+    }
+#ifdef DEBUG
+    cout << PROGRAM_NAME << ": All Nodes have been deleted" << endl ;
+#endif
+    assert( validate() );
+}
 
 int *List::get_first() const noexcept {
     if(empty()){
