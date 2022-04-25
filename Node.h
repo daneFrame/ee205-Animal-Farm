@@ -31,6 +31,7 @@ return true;
     virtual bool operator>(const Node &rightSide){
 if(leftSide> rightSide){
 return true;
+///      return compareByAddress( this, &(Node&)rightSide );
 }
     }
 

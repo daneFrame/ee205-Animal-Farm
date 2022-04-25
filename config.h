@@ -10,27 +10,22 @@
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 
+#include <iomanip>
+
 #define PROGRAM_TITLE "Animal Farm 2"
 #define PROGRAM_NAME "animalFarm2"
-#define FORMAT_LINE_FOR_DUMP (className,member)
-#define PRINT_HEADING_FOR_DUMP
 
-#ifdef PRINT_HEADING_FOR_DUMP
-/* Print =========================================================== */   \
+#define PRINT_HEADING_FOR_DUMP                                                \
+    /* Print =========================================================== */   \
     std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl
-#endif
 
-#ifdef FORMAT_LINE_FOR_DUMP
-std::cout << std::setfill( ' ' )  /* Space pad    */  \
+#define FORMAT_LINE_FOR_DUMP( className, member )         \
+    std::cout << std::setfill( ' ' )  /* Space pad    */  \
               << std::left            /* Left justify */  \
               << std::boolalpha  /* Print `true` or `false` for `bool`s */ \
               << std::setw( 8) << (className)             \
               << std::setw(20) << (member)                \
               << std::setw(52)  /* (data) */
-#endif
-
-
-
 
 enum gender {UNKNOWN_GENDER = 0, MALE, FEMALE};
 enum breed {UNKNOWN_BREED = 0, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
