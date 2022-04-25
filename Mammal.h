@@ -8,14 +8,24 @@
 /// @author Dane Sears <dsears@hawaii.edu>
 /// @date   DAY_MON_YEAR
 ///////////////////////////////////////////////////////////////////////////////
+#pragma once
 
+#include "Animal.h"
+#include "Color.h"
 
 class Mammal {
+protected:
+    Color color = Color::UNKNOWN_COLOR;
+
 public:
     static const std::string MAMMAL_NAME;
     Mammal( const Weight::t_weight newMaxWeight, const std::string& newSpecies) : Animal( newMaxWeight, MAMMAL_NAME, newSpecies ) {};
 
     Mammal( const Color newColor, const Gender newGender, const Weight::t_weight newWeight, const Weight::t_weight newMaxWeight, const std::string& newSpecies) : Animal( newGender, newWeight, newMaxWeight, MAMMAL_NAME, newSpecies ) {
-        setColor( newColor );
-    };
+        setColor(newColor);
+
+        Color getColor() const noexcept { return color; }
+        void setColor( const Color newColor ) noexcept { color = newColor; }
+        void dump()  noexcept override;
+    }
 };
