@@ -46,6 +46,18 @@ return firstNode;
 void SinglyLinkedList::insert_after(Node *currentNode, Node *newNode) {}
 
 void SinglyLinkedList::push_front(Node *newNode) {
-
+if(newNode == nullptr || head == nullptr){
+    std::cout << "Invalid Argument: newNode points to null." << std::endl;
+    return;
 }
-
+if(!validate()) {
+    std::cout << "Domain Error: newNode is not valid" << std::endl;
+    return;
+}
+if(newNode->next == newNode){
+    std::cout << "Logic Error: newNode is already in container" << std::endl;
+    return;
+}
+newNode->next = head;
+head = newNode;
+}
