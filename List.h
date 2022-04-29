@@ -26,7 +26,7 @@ public:
 
 public:
     bool empty() const noexcept;
-    unsigned int size() const noexcept;
+    unsigned int size() noexcept;
     bool isIn(Node* aNode) const;
     bool isSorted() const noexcept;
     Node* get_first() const noexcept;

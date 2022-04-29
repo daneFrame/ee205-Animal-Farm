@@ -15,7 +15,17 @@
 #include "Node.h"
 
 
-unsigned int List::size() const noexcept {}
+unsigned int List::size() noexcept {
+    if(head==nullptr){
+        return count = 0;
+    }
+    Node* countingNode = head;
+    while(countingNode != nullptr){
+        countingNode->next;
+        count++;
+    }
+    return count;
+}
 
 //void List::dump() const noexcept {}
 

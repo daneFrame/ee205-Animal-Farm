@@ -14,7 +14,6 @@
 #include <stdexcept>
 #include <iomanip>
 
-#include "reportCats.h"
 #include "Cat.h"
 
 using namespace std;
