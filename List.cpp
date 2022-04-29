@@ -20,7 +20,7 @@ unsigned int List::size() noexcept {
         return count = 0;
     }
     Node* countingNode = head;
-    while(countingNode != nullptr){
+    while(countingNode->next != nullptr){
         countingNode->next;
         count++;
     }
