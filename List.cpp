@@ -58,4 +58,6 @@ bool List::isIn(Node *aNode) const {}
 
 bool List::isSorted() const noexcept {}
 
-///int *List::pop_front() noexcept {}
+///int *List::pop_front() noexcept {
+   /// head = head->next;
+///}
