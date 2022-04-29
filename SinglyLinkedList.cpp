@@ -43,7 +43,9 @@ return firstNode;
     }
 }
 
-void SinglyLinkedList::insert_after(Node *currentNode, Node *newNode) {}
+void SinglyLinkedList::insert_after(Node *currentNode, Node *newNode) {
+    *newNode = *currentNode->next;
+}
 
 void SinglyLinkedList::push_front(Node *newNode) {
 if(newNode == nullptr || head == nullptr){
