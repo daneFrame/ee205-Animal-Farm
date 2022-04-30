@@ -12,7 +12,7 @@
 
 #include <string>
 
-#include "Weight.h"
+            #include "Weight.h"
 #include "config.h"
 #include "Mammal.h"
 

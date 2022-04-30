@@ -64,19 +64,18 @@ using namespace std;
     //strcpy(name, newName);
 //}
 
-void Cat::setName(std::string *newName){
-    validateName(newName);
-    memset(name, 0, MAX_NAME);
-    strcpy(name, newName);
+void Cat::setName(const std::string &newName){
+    assert(validateName(newName));
+    name = newName;
 }
 
-gender Cat::getGender() const noexcept {
-    return Gender;
-}
+//gender Cat::getGender() const noexcept {
+  //  return Gender;
+//}
 
-breed Cat::getBreed() const noexcept {
-    return Breed;
-}
+//breed Cat::getBreed() const noexcept {
+  //  return Breed;
+//}
 
 bool Cat::isFixed() const noexcept {
     return catFixed;
