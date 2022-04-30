@@ -48,12 +48,9 @@ void List::deleteAllNodes() noexcept {
     assert( validate() );
 }
 
-int *List::get_first() const noexcept {
-    if(empty()){
-        return nullptr;
-    }else{
-        return head;
-    }
+Node *List::get_first() const noexcept {
+    return head;
+
 }
 
 int *List::get_next(const int *currentNode) {
@@ -64,9 +61,30 @@ int *List::get_next(const int *currentNode) {
     }
 }
 
-bool List::isIn(Node *aNode) const {}
+bool List::isIn(Node *aNode) const {
+    if(aNode == nullptr){
+throw std::invalid_argument("aNode is nullptr");
+    }else{
+        Node* checkNode = head;
+        while(checkNode->next != aNode || checkNode->next != nullptr){
+            checkNode->next;
+            if(checkNode == aNode){
+                return true;
+            }
+            }
+        return false;
+        }
+    }
 
-bool List::isSorted() const noexcept {}
+bool List::isSorted() const {
+    Node* checkNode = head;
+    for(checkNode = head; checkNode->next != nullptr; checkNode->next){
+if(checkNode > checkNode->next){
+return false;
+}
+    }
+    return true;
+}
 
 ///int *List::pop_front() noexcept {
    /// head = head->next;

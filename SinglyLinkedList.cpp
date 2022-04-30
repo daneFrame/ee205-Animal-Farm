@@ -63,3 +63,7 @@ if(newNode->next == newNode){
 newNode->next = head;
 head = newNode;
 }
+
+bool validate() noexcept{
+
+}
