@@ -104,12 +104,12 @@ bool Cat::validateName(const std::string &newName) {
     return !newName.empty();
 }
 
-bool Cat::validateGender(const gender newGender) {
-    if(newGender == UNKNOWN_GENDER) {
-        throw invalid_argument(PROGRAM_NAME ": gender must be known");
-    }
-return true;
-}
+///bool Cat::validateGender(const gender newGender) {
+   /// if(newGender == UNKNOWN_GENDER) {
+      ///  throw invalid_argument(PROGRAM_NAME ": gender must be known");
+    ///}
+///return true;
+///}
 
 bool Cat::validateBreed(const breed newBreed) {
     if(newBreed == UNKNOWN_BREED){
