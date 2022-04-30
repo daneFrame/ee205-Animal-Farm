@@ -36,5 +36,5 @@ public:
     virtual void dump() const noexcept = 0;
     virtual bool validate() const noexcept = 0;
 
-    int *get_next(const int *currentNode);
+    Node *get_next(const Node *currentNode);
 };

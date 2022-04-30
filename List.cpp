@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include <stdexcept>
 #include <cassert>
+#include <iostream>
 
 #include "List.h"
 #include "Node.h"
@@ -53,7 +54,7 @@ Node *List::get_first() const noexcept {
 
 }
 
-int *List::get_next(const int *currentNode) {
+Node *List::get_next(const Node *currentNode) {
     if(currentNode == nullptr){
         throw std::invalid_argument("invalid_argument");
     }else{
