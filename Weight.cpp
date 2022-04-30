@@ -196,3 +196,8 @@ cout << "Unit of Weight: " << unitOfWeight << endl;
 cout << "Weight: " << weight << endl;
 cout << "Max Weight: " << maxWeight << endl;
 }
+
+void Weight::setWeight(t_weight newWeight) {
+    assert( isWeightValid( newWeight ) );
+    weight = newWeight;
+}

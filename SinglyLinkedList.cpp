@@ -20,7 +20,9 @@
 
 using namespace std;
 
-void SinglyLinkedList::dump()  noexcept{
+SinglyLinkedList::SinglyLinkedList() {}
+
+void SinglyLinkedList::dump() const noexcept{
     std::cout<< "SinglyLinkedList:  head=[" << head << std::endl;
     if (head != nullptr){
         Node* dumpedNode = head;
@@ -64,11 +66,12 @@ newNode->next = head;
 head = newNode;
 }
 
-bool SinglyLinkedList::validate() noexcept {
+bool SinglyLinkedList::validate() const noexcept {
 assert(head!= nullptr);
     Node* checkNode = head;
 for(int i = 0; i < size(); i++){
     checkNode = checkNode->next;
     checkNode->validate();
 }
+    return true;
 }

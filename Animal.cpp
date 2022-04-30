@@ -69,6 +69,10 @@ assert(weight.validate());
     return true;
 }
 
+std::string Animal::getClassification() const noexcept {
+    return classification;
+}
+
 bool Animal::validateClassification	(	const std::string & 	checkClassification	) noexcept	{
 return !checkClassification.empty();
 }

@@ -16,15 +16,7 @@
 #include "Node.h"
 
 
-unsigned int List::size() noexcept {
-    if(head==nullptr){
-        return count = 0;
-    }
-    Node* countingNode = head;
-    while(countingNode->next != nullptr){
-        countingNode->next;
-        count++;
-    }
+unsigned int List::size() const noexcept {
     return count;
 }
 
@@ -34,8 +26,7 @@ unsigned int List::size() noexcept {
 //}
 
 bool List::empty() const noexcept {
-    if(head == nullptr)
-        return true;
+    return head == nullptr;
 }
 
 void List::deleteAllNodes() noexcept {

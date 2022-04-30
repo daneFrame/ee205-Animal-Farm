@@ -17,6 +17,9 @@
 #include "Weight.h"
 #include "Cat.h"
 
+const Weight::t_weight Cat::MAX_WEIGHT = 40;
+const std::string Cat::SPECIES_NAME = "Felis Catus";
+
 using namespace std;
 
 //void Cat::zeroProtocol() {

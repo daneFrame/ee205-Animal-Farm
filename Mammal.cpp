@@ -11,6 +11,8 @@
 #include "Mammal.h"
 #include "Animal.h"
 
+const std::string Mammal::MAMMAL_NAME = "Mammilian";
+
 Color Mammal::getColor() const noexcept {
     return color;
 }

@@ -27,7 +27,7 @@ public:
 
 public:
     bool empty() const noexcept;
-    unsigned int size() noexcept;
+    unsigned int size() const noexcept;
     bool isIn(Node* aNode) const;
     bool isSorted() const;
     Node * get_first() const noexcept;
@@ -36,5 +36,5 @@ public:
     virtual void dump() const noexcept = 0;
     virtual bool validate() const noexcept = 0;
 
-    Node *get_next(const Node *currentNode);
+    static Node *get_next(const Node *currentNode);
 };

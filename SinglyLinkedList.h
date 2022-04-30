@@ -15,9 +15,10 @@
 
 class SinglyLinkedList: public List {
 public:
-    void dump()  noexcept;
+    SinglyLinkedList();
+    void dump() const noexcept override;
     void 	push_front (Node *newNode);
-    Node* 	pop_front () noexcept;
-    void 	insert_after (Node *currentNode, Node *newNode);
-    bool validate() noexcept;
+    Node* 	pop_front () noexcept override;
+    void 	insert_after (Node* currentNode, Node* newNode);
+    bool validate() const noexcept;
 };
