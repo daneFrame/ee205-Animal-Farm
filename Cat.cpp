@@ -50,9 +50,9 @@ using namespace std;
   //  zeroProtocol();
 //}
 
-std::string *Cat::getName() const noexcept {
-return name;
-}
+//std::string *Cat::getName() const noexcept {
+//return name;
+//}
 
 //const char *Cat::getName() const noexcept {
 //    return name;
