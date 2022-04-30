@@ -164,16 +164,16 @@ return bHasMax;
 }
 ///////////////////////////////////////////////////////
 
-std::ostream& operator<<( ostream& lhs_stream
-        ,const Weight::UnitOfWeight rhs_UnitOfWeight ) {
-    switch( rhs_UnitOfWeight ) {
-        case Weight::POUND: return lhs_stream << POUND_LABEL ;
-        case Weight::KILO:  return lhs_stream << KILO_LABEL ;
-        case Weight::SLUG:  return lhs_stream << SLUG_LABEL ;
-        default:
-            throw out_of_range( "The unit can’t be mapped to a string" );
-    }
-}
+//std::ostream& operator<<( ostream& lhs_stream
+  //      ,const Weight::UnitOfWeight rhs_UnitOfWeight ) {
+    //switch( rhs_UnitOfWeight ) {
+      //  case Weight::POUND: return lhs_stream << POUND_LABEL ;
+        //case Weight::KILO:  return lhs_stream << KILO_LABEL ;
+        //case Weight::SLUG:  return lhs_stream << SLUG_LABEL ;
+        //default:
+        //    throw out_of_range( "The unit can’t be mapped to a string" );
+    //}
+//}
 
 bool Weight::operator==(const Weight &rhs_Weight) const {
 

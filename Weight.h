@@ -74,3 +74,17 @@ public:
 public:
     static float convertWeight( float fromWeight, Weight::UnitOfWeight fromUnit,Weight::UnitOfWeight toUnit ) noexcept;
 };
+
+inline std::ostream& operator<<( std::ostream& lhs_stream
+        ,const Weight::UnitOfWeight rhs_UnitOfMeasure ) {
+    switch (rhs_UnitOfMeasure) {
+        case Weight::POUND:
+            return lhs_stream << "POUNDS";
+        case Weight::KILO:
+            return lhs_stream << "KILOS";
+        case Weight::SLUG:
+            return lhs_stream << "SLUGS";
+        default:
+            throw std::out_of_range("The unit can’t be mapped to a string");
+    }
+}
