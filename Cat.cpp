@@ -129,10 +129,10 @@ void Cat::fixCat() noexcept {
     Cat::isCatFixed = true;
 }
 
-void Cat::setWeight(Weight newWeight) {
-    validateWeight(newWeight);
-    Cat::weight = newWeight;
-}
+//void Cat::setWeight(Weight newWeight) {
+  //  validateWeight(newWeight);
+    //Cat::weight = newWeight;
+//}
 
 //void Cat::setGender(gender newGender) {
   //  if(Gender != UNKNOWN_GENDER){
