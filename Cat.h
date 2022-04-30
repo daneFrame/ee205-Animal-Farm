@@ -56,6 +56,7 @@ public:
     void fixCat() noexcept;
     Weight getWeight() const noexcept;
     void setWeight(Weight newWeight);
+    virtual std::string speak() const;
 
 protected:
 public:

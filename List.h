@@ -17,8 +17,9 @@
 #include "config.h"
 
 class List {
+    ///friend class Animal;
 protected:
-    Node *head = nullptr;
+    Node* head = nullptr;
 unsigned int count = 0;
 
 public:

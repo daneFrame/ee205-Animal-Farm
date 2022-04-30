@@ -13,6 +13,8 @@
 #include "Weight.h"
 #include "Gender.h"
 
+#define KINGDOM_NAME "Animalia"
+
 class Animal {
 public:
     Animal (const Weight::t_weight newMaxWeight, const std::string &newClassification, const std::string &newSpecies);
@@ -25,8 +27,8 @@ public:
     Weight::t_weight 	getWeight () const noexcept;
     void 	setWeight (const Weight::t_weight newWeight);
     virtual std::string 	speak () const noexcept=0;
-    void 	dump () const noexcept override;
-    bool 	validate () const noexcept override;
+    void 	dump () const noexcept;
+    bool 	validate () const noexcept;
 
 private:
     static bool 	validateClassification (const std::string &checkClassification) noexcept;

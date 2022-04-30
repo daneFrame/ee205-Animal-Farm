@@ -174,3 +174,7 @@ void Cat::setBreed(breed newBreed) {
     validateBreed(newBreed);
     Cat::Breed = newBreed;
 }
+
+std::string Cat::speak() const {
+    return "Meow";
+}

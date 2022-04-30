@@ -22,7 +22,7 @@ enum class Gender {
 /// `rhs` stands for Right Hand Side and means the right
 /// side of the `<<` operator.
 /// @return `Unknown gender`, `Female` or `Male`.
-inline std::ostream& operator<<( std::ostream& lhs_stream, const Gender& rhs_Gender ){
+inline std::ostream& operator<<(std::ostream& lhs_stream, std::logic_error rhs_Gender ){
     switch( rhs_Gender ) {
         case Gender::UNKNOWN_GENDER:
             lhs_stream << "Unknown gender";
