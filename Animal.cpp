@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include <iomanip>
 #include <iostream>
+#include <cassert>
 
 #include "Weight.h"
 #include "Animal.h"
@@ -61,12 +62,15 @@ void Animal::setGender(const Gender newGender){
 }
 
 bool Animal::validate() const noexcept{
-
+assert(validateClassification(getClassification()));
+assert(validateSpecies(getSpecies()));
 }
 
 bool Animal::validateClassification	(	const std::string & 	checkClassification	) noexcept	{
-if(!checkClassification.empty()){
-    return false;
+return !checkClassification.empty();
 }
-    return true;
+
+bool Animal::validateSpecies(const std::string & checkSpecies) noexcept{
+    return !checkSpecies.empty();
 }
+
