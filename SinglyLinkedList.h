@@ -10,9 +10,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 
+#include "Node.h"
 #include "List.h"
 
-class SinglyLinkedList {
+class SinglyLinkedList: public List {
 public:
     void dump() const noexcept;
     void 	push_front (Node *newNode);
