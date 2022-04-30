@@ -20,7 +20,7 @@
 
 using namespace std;
 
-void SinglyLinkedList::dump() const noexcept{
+void SinglyLinkedList::dump()  noexcept{
     std::cout<< "SinglyLinkedList:  head=[" << head << std::endl;
     if (head != nullptr){
         Node* dumpedNode = head;

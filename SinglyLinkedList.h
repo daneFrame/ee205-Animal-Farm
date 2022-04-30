@@ -15,7 +15,7 @@
 
 class SinglyLinkedList: public List {
 public:
-    void dump() const noexcept;
+    void dump()  noexcept;
     void 	push_front (Node *newNode);
     Node* 	pop_front () noexcept;
     void 	insert_after (Node *currentNode, Node *newNode);
