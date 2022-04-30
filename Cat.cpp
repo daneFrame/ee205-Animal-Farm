@@ -14,6 +14,7 @@
 #include <stdexcept>
 #include <iomanip>
 
+#include "Weight.h"
 #include "Cat.h"
 
 using namespace std;
@@ -92,7 +93,6 @@ bool Cat::validate() const noexcept {
         validateName(name);
         validateGender(Gender);
         validateBreed(Breed);
-        validateWeight(weight);
     } catch (exception const& e) {
         cout << e.what() << endl;
         return false;
@@ -145,13 +145,13 @@ void Cat::setWeight(Weight newWeight) {
     Cat::weight = newWeight;
 }
 
-void Cat::setGender(gender newGender) {
-    if(Gender != UNKNOWN_GENDER){
-        throw logic_error(PROGRAM_NAME ": gender is already set and cannot be changed.");
-    }
-    validateGender(newGender);
-    Cat::Gender = newGender;
-}
+//void Cat::setGender(gender newGender) {
+  //  if(Gender != UNKNOWN_GENDER){
+    //    throw logic_error(PROGRAM_NAME ": gender is already set and cannot be changed.");
+    //}
+    //validateGender(newGender);
+    //Cat::Gender = newGender;
+//}
 
 void Cat::setBreed(breed newBreed) {
     if(Breed != UNKNOWN_BREED){

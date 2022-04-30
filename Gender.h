@@ -8,6 +8,10 @@
 /// @author Dane Sears <dsears@hawaii.edu>
 /// @date   14_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
+#pragma once
+
+#include "config.h"
+
 enum class Gender {
     UNKNOWN_GENDER=0
     ,MALE

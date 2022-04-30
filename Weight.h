@@ -8,6 +8,8 @@
 /// @author Dane Sears <dsears@hawaii.edu>
 /// @date   16_APR_2022
 ///////////////////////////////////////////////////////////////////////////////
+#pragma once
+
 #include <string>
 #include <ostream>
 
