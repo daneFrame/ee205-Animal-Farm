@@ -23,8 +23,10 @@ public:
     Mammal( const Color newColor,const Gender newGender,const Weight::t_weight newWeight,const Weight::t_weight newMaxWeight,const std::string& newSpecies) : Animal( newGender, newWeight, newMaxWeight, MAMMAL_NAME, newSpecies ) {
         setColor( newColor );};
 public:
-    Color getColor() const noexcept{return color;}
+    ///Color getColor() const noexcept{return color;};
     void setColor( const Color newColor ) noexcept { color = newColor; }
 public:
     void dump() const noexcept ;
+
+    Color getColor() const;
 };

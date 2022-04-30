@@ -39,16 +39,16 @@ using namespace std;
     //setWeight(newWeight);
 //}
 
-Cat::Cat(std::string newName, const gender newGender, const breed newBreed, const Weight newWeight) : Cat() {
-    setName(newName);
-    setGender(newGender);
-    setBreed(newBreed);
-    setWeight(newWeight);
-}
+//Cat::Cat(std::string newName, const Gender newGender, const Breed newBreed, const Weight newWeight) : Cat() {
+  //  setName(newName);
+  //  setGender(newGender);
+  //  setBreed(newBreed);
+  //  setWeight(newWeight);
+//}
 
-Cat::~Cat() {
-    zeroProtocol();
-}
+//Cat::~Cat() {
+  //  zeroProtocol();
+//}
 
 std::string *Cat::getName() const noexcept {
 return name;
