@@ -60,3 +60,13 @@ void Animal::setGender(const Gender newGender){
     }
 }
 
+bool Animal::validate() const noexcept{
+
+}
+
+bool Animal::validateClassification	(	const std::string & 	checkClassification	) noexcept	{
+if(!checkClassification.empty()){
+    return false;
+}
+    return true;
+}
