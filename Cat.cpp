@@ -118,12 +118,12 @@ bool Cat::validateName(const std::string &newName) {
     ///return true;
 ///}
 
-bool Cat::validateWeight(const Weight newWeight) {
-    if(newWeight <= 0){
-        throw invalid_argument(PROGRAM_NAME ": weight must be greater than 0");
-    }
-    return true;
-}
+///bool Cat::validateWeight(const Weight newWeight) {
+   /// if(newWeight <= 0){
+      ///  throw invalid_argument(PROGRAM_NAME ": weight must be greater than 0");
+    ///}
+    ///return true;
+///}
 
 void Cat::fixCat() noexcept {
     Cat::isCatFixed = true;
