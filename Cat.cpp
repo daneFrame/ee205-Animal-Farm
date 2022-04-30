@@ -78,12 +78,12 @@ void Cat::setName(const std::string &newName){
 //}
 
 bool Cat::isFixed() const noexcept {
-    return catFixed;
+    return isCatFixed;
 }
 
-Weight Cat::getWeight() const noexcept {
-    return weight;
-}
+///Weight Cat::getWeight() const noexcept {
+  ///  return weight;
+///}
 
 #define FORMAT_LINE(className, member) cout << setw(8) << ( className ) << setw(20) << member << setw(52)
 
