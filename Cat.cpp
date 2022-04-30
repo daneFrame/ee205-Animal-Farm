@@ -142,13 +142,13 @@ void Cat::fixCat() noexcept {
     //Cat::Gender = newGender;
 //}
 
-void Cat::setBreed(breed newBreed) {
-    if(Breed != UNKNOWN_BREED){
-        throw logic_error(PROGRAM_NAME ": breed is already set and cannot be changed.");
-    }
-    validateBreed(newBreed);
-    Cat::Breed = newBreed;
-}
+//void Cat::setBreed(breed newBreed) {
+  //  if(Breed != UNKNOWN_BREED){
+    //    throw logic_error(PROGRAM_NAME ": breed is already set and cannot be changed.");
+    //}
+    //validateBreed(newBreed);
+    //Cat::Breed = newBreed;
+//}
 
 std::string Cat::speak() const {
     return "Meow";
