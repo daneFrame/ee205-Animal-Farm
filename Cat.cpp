@@ -111,12 +111,12 @@ bool Cat::validateName(const std::string &newName) {
 ///return true;
 ///}
 
-bool Cat::validateBreed(const breed newBreed) {
-    if(newBreed == UNKNOWN_BREED){
-        throw invalid_argument(PROGRAM_NAME ": breed must be known");
-    }
-    return true;
-}
+///bool Cat::validateBreed(const breed newBreed) {
+   /// if(newBreed == UNKNOWN_BREED){
+      ///  throw invalid_argument(PROGRAM_NAME ": breed must be known");
+    ///}
+    ///return true;
+///}
 
 bool Cat::validateWeight(const Weight newWeight) {
     if(newWeight <= 0){
