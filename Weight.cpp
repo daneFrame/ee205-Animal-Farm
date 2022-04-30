@@ -198,6 +198,6 @@ cout << "Max Weight: " << maxWeight << endl;
 }
 
 void Weight::setWeight(t_weight newWeight) {
-    assert( isWeightValid( newWeight ) );
+    ///assert( isWeightValid( newWeight ) );
     weight = newWeight;
 }
