@@ -90,8 +90,8 @@ bool Cat::isFixed() const noexcept {
 bool Cat::validate() const noexcept {
     try {
         validateName(name);
-        validateGender(Gender);
-        validateBreed(Breed);
+        ///validateGender(Gender);
+        ///validateBreed(Breed);
     } catch (exception const& e) {
         cout << e.what() << endl;
         return false;
@@ -100,18 +100,8 @@ bool Cat::validate() const noexcept {
 }
 
 //bool Cat::validateName(const char *newName) {
-bool Cat::validateName(std::string *newName) {
-
-    if(newName == nullptr) {
-        throw invalid_argument(PROGRAM_NAME ": name must not be NULL");
-    }
-    if(strlen(newName) >= MAX_NAME){
-        throw length_error(PROGRAM_NAME ": name must be less than MAX_NAME");
-    }
-    if(strlen(newName) <= 0){
-        throw length_error(PROGRAM_NAME ": name must be of greater length than 0");
-    }
-return true;
+bool Cat::validateName(const std::string &newName) {
+    return !newName.empty();
 }
 
 bool Cat::validateGender(const gender newGender) {
