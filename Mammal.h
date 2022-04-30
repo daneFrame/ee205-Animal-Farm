@@ -33,4 +33,6 @@ public:
     void dump() const noexcept ;
 
     Color getColor() const noexcept;
+
+    virtual string speak() const noexcept = 0;
 };

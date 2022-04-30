@@ -30,22 +30,36 @@
 using namespace std;
 
 int main() {
+
+    //Weight weightOne(6, Weight::KILO, 40);
+    //weightOne.getWeight();
     cout << "Starting " << PROGRAM_TITLE << endl ;
-    SinglyLinkedList catDB;
-    catDB.push_front(reinterpret_cast<Node *>(new Cat("Loki", Color::CREAM, true, Gender::MALE, 1.0))) ;
-    catDB.push_front(reinterpret_cast<Node *>(new Cat("Milo", Color::BLACK, true, Gender::MALE, 1.1))) ;
-    catDB.push_front(reinterpret_cast<Node *>(new Cat("Bella", Color::BROWN, true, Gender::FEMALE, 1.2))) ;
-    catDB.push_front(reinterpret_cast<Node *>(new Cat("Kali", Color::CALICO, true, Gender::FEMALE, 1.3))) ;
-    catDB.push_front(reinterpret_cast<Node *>(new Cat("Trin", Color::WHITE, true, Gender::FEMALE, 1.4))) ;
-    catDB.insert_after(catDB.get_first(),
-                       reinterpret_cast<Node *>(new Cat("Chili", Color::GINGER, true, Gender::MALE, 1.5)));
-    for( Animal* pAnimal = (Animal*)catDB.get_first() ; pAnimal != nullptr ; pAnimal = (Animal*)List::get_next( (Node*)pAnimal ) ) {
-      cout << pAnimal->speak() << endl;
+    SinglyLinkedList catDB ;
+
+    //Cat catOne("Black");
+    //Cat catTwo("Aksel", Color::BLACK, false, Gender:: MALE, 6.9);
+    catDB.push_front( new Cat( "Loki", Color::CREAM, true, Gender::MALE, 1.0 ) ) ;
+
+    catDB.push_front( new Cat( "Milo", Color::BLACK, true, Gender::MALE, 1.1 ) ) ;
+    //std::cout<<"here" << std::endl;
+
+   catDB.push_front( new Cat( "Bella", Color::BROWN, true, Gender::FEMALE, 1.2 ) ) ;
+    catDB.push_front( new Cat( "Kali", Color::CALICO, true, Gender::FEMALE, 1.3 ) ) ;
+    catDB.push_front( new Cat( "Trin", Color::WHITE, true, Gender::FEMALE, 1.4 ) ) ;
+    catDB.insert_after(catDB.get_first(), new Cat( "Chili", Color::GINGER, true,
+                                                   Gender::MALE, 1.5 ) );
+    for( Animal* pAnimal = (Animal*)catDB.get_first() ; pAnimal != nullptr ; pAnimal =
+                                                                                     (Animal*)List::get_next( (Node*)pAnimal ) ) {
+        cout << pAnimal->speak() << endl;
     }
-    catDB.validate() ;
-    catDB.dump() ;
-    catDB.deleteAllNodes() ;
-    catDB.dump() ;
+    //catDB.validate() ;
+    catDB.dump();
+    //catDB.deleteAllNodes() ;
+    //catOne.dump();
+    //catTwo.dump();
+    //catOne.getWeight();
+//cout << catOne.getName() << endl;
+    //catDB.dump() ;
     cout << "Done with " << PROGRAM_TITLE ;
     return( EXIT_SUCCESS ) ;
 }

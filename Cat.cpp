@@ -22,73 +22,16 @@ const std::string Cat::SPECIES_NAME = "Felis Catus";
 
 using namespace std;
 
-//void Cat::zeroProtocol() {
-   // memset(name, 0, MAX_NAME);
-  //  Gender = UNKNOWN_GENDER;
-   // Breed = UNKNOWN_BREED;
-    //catFixed = false;
-    //next = nullptr;
-    //weight = UNKNOWN_WEIGHT;
-//}
-
-//Cat::Cat() {
-  //  zeroProtocol();
-//}
-
-//Cat::Cat(const char *newName, const gender newGender, const breed newBreed, const Weight newWeight) : Cat() {
-  //  setName(newName);
-    //setGender(newGender);
-    //setBreed(newBreed);
-    //setWeight(newWeight);
-//}
-
-//Cat::Cat(std::string newName, const Gender newGender, const Breed newBreed, const Weight newWeight) : Cat() {
-  //  setName(newName);
-  //  setGender(newGender);
-  //  setBreed(newBreed);
-  //  setWeight(newWeight);
-//}
-
-//Cat::~Cat() {
-  //  zeroProtocol();
-//}
-
-//std::string *Cat::getName() const noexcept {
-//return name;
-//}
-
-//const char *Cat::getName() const noexcept {
-//    return name;
-//}
-
-//void Cat::setName(const char *newName) {
-  //  validateName(newName);
-   // memset(name, 0, MAX_NAME);
-    //strcpy(name, newName);
-//}
 
 void Cat::setName(const std::string &newName){
     assert(validateName(newName));
     name = newName;
 }
 
-//gender Cat::getGender() const noexcept {
-  //  return Gender;
-//}
-
-//breed Cat::getBreed() const noexcept {
-  //  return Breed;
-//}
 
 bool Cat::isFixed() const noexcept {
     return isCatFixed;
 }
-
-///Weight Cat::getWeight() const noexcept {
-  ///  return weight;
-///}
-
-#define FORMAT_LINE(className, member) cout << setw(8) << ( className ) << setw(20) << member << setw(52)
 
 bool Cat::validate() const noexcept {
     try {
@@ -102,57 +45,25 @@ bool Cat::validate() const noexcept {
     return true;
 }
 
-//bool Cat::validateName(const char *newName) {
 bool Cat::validateName(const std::string &newName) {
     return !newName.empty();
 }
 
-///bool Cat::validateGender(const gender newGender) {
-   /// if(newGender == UNKNOWN_GENDER) {
-      ///  throw invalid_argument(PROGRAM_NAME ": gender must be known");
-    ///}
-///return true;
-///}
-
-///bool Cat::validateBreed(const breed newBreed) {
-   /// if(newBreed == UNKNOWN_BREED){
-      ///  throw invalid_argument(PROGRAM_NAME ": breed must be known");
-    ///}
-    ///return true;
-///}
-
-///bool Cat::validateWeight(const Weight newWeight) {
-   /// if(newWeight <= 0){
-      ///  throw invalid_argument(PROGRAM_NAME ": weight must be greater than 0");
-    ///}
-    ///return true;
-///}
 
 void Cat::fixCat() noexcept {
     Cat::isCatFixed = true;
 }
 
-//void Cat::setWeight(Weight newWeight) {
-  //  validateWeight(newWeight);
-    //Cat::weight = newWeight;
-//}
-
-//void Cat::setGender(gender newGender) {
-  //  if(Gender != UNKNOWN_GENDER){
-    //    throw logic_error(PROGRAM_NAME ": gender is already set and cannot be changed.");
-    //}
-    //validateGender(newGender);
-    //Cat::Gender = newGender;
-//}
-
-//void Cat::setBreed(breed newBreed) {
-  //  if(Breed != UNKNOWN_BREED){
-    //    throw logic_error(PROGRAM_NAME ": breed is already set and cannot be changed.");
-    //}
-    //validateBreed(newBreed);
-    //Cat::Breed = newBreed;
-//}
-
 std::string Cat::speak() const noexcept {
     return "Meow";
+}
+
+std::string Cat::getName() const noexcept {
+    return name;
+}
+
+void Cat::dump() const noexcept {
+    Mammal::dump();
+    FORMAT_LINE_FOR_DUMP( "Cat", "name") << name << std::endl;
+    FORMAT_LINE_FOR_DUMP( "Cat", "is fixed") << isCatFixed << std::endl;
 }

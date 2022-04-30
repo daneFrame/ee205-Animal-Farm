@@ -23,13 +23,21 @@ using namespace std;
 SinglyLinkedList::SinglyLinkedList() {}
 
 void SinglyLinkedList::dump() const noexcept{
-    std::cout<< "SinglyLinkedList:  head=[" << head << std::endl;
+    std::cout<< "SinglyLinkedList:  head=[" << head <<  "]" << std::endl;
+    std::cout<<"here one" << std::endl;
+
     if (head != nullptr){
+        std::cout<<"here" << std::endl;
+
         Node* dumpedNode = head;
         PRINT_HEADING_FOR_DUMP;
-for(int i=0; i < size();i++ ){
-dumpedNode->dump();
-dumpedNode->next;
+for(int i=0; i < count;i++ ){
+    PRINT_HEADING_FOR_DUMP;
+    std::cout<<"here" << std::endl;
+
+    dumpedNode->dump();
+cout<<"here" <<endl;
+dumpedNode = dumpedNode->next;
 }
     }
 }
@@ -50,25 +58,27 @@ void SinglyLinkedList::insert_after(Node *currentNode, Node *newNode) {
 }
 
 void SinglyLinkedList::push_front(Node *newNode) {
-if(newNode == nullptr) {
-    std::cout << "Invalid Argument: newNode points to null." << std::endl;
-}
-if(!validate()) {
-    std::cout << "Domain Error: newNode is not valid" << std::endl;
-    return;
-}
-if(newNode->next == newNode){
-    std::cout << "Logic Error: newNode is already in container" << std::endl;
-    return;
-}
+//if(newNode == nullptr) {
+//    std::cout << "Invalid Argument: newNode points to null." << std::endl;
+//}
+//if(!validate()) {
+//    std::cout << "Domain Error: newNode is not valid" << std::endl;
+//    return;
+//}
+////if(newNode->next == newNode){
+//  //  std::cout << "Logic Error: newNode is already in container" << std::endl;
+//    //return;
+//}
+
 newNode->next = head;
 head = newNode;
+count ++;
 }
 
 bool SinglyLinkedList::validate() const noexcept {
 if(head!= nullptr) {
     Node *checkNode = head;
-    for (int i = 0; i < size(); i++) {
+    for (int i = 0; i < count; i++) {
         checkNode = checkNode->next;
         checkNode->validate();
     }

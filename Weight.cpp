@@ -156,7 +156,6 @@ Weight::Weight(float newWeight, UnitOfWeight newUnitOfWeight, float newMaxWeight
 
 ////getters
 float Weight::getWeight() const noexcept{
-assert(validate());
 return weight;
 }
 bool Weight::hasMaxWeight() const noexcept {

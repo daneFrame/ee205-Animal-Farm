@@ -41,10 +41,9 @@ void Animal::dump() const noexcept {
     FORMAT_LINE_FOR_DUMP("Animal", "classification") << getClassification() << endl;
     FORMAT_LINE_FOR_DUMP("Animal", "species") << getSpecies() << endl;
     FORMAT_LINE_FOR_DUMP("Animal", "gender") << getGender() << endl;
-    std::cout << "Animal  weight              " << getWeight() << " out of " << weight.maxWeight << " "
-              << weight.unitOfWeight << std::endl;
+    std::cout << "Animal  weight              " << weight.getWeight() << " out of " << weight.maxWeight << " " << weight.unitOfWeight << std::endl;
 
-    ///FORMAT_LINE_FOR_DUMP("Mammal", "color") << getColor << endl;
+    ///FORMAT_LINE_FOR_DUMP("Mammal", "color") << getColor() << endl;
 }
 std::string Animal::getKingdom() const noexcept{
     return KINGDOM_NAME;

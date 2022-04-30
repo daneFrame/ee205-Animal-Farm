@@ -21,7 +21,7 @@ class Node {
 
 public:
     virtual void dump() const {
-        ///FORMAT_LINE_FOR_DUMP("Node", "this") << this << std::endl;
+        FORMAT_LINE_FOR_DUMP("Node", "this") << this << std::endl;
         FORMAT_LINE_FOR_DUMP("Node", "next") << next << std::endl;
     }
 
@@ -35,8 +35,12 @@ public:
 protected:
     Node *next = nullptr;
 
-    static bool compareByAddress(const Node *node1, const Node *node2);
-
+    static bool compareByAddress ( const Node* node1, const Node* node2 ){
+        if ( node1 > node2 ){
+            return true;
+        }
+        return false;
+    }
     virtual bool operator>(const Node &rhs_Node) {
         return compareByAddress(this, &(Node &) rhs_Node);
     }
