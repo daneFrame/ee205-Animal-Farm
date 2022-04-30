@@ -34,7 +34,7 @@ Animal::Animal(const Gender newGender, const Weight::t_weight newWeight, const W
 }
 
 void Animal::dump() const noexcept {
-    std::cout << "SinglyLinkedList:  head=[" << head << std::endl;
+    std::cout << "Animal:  head=[" << head << std::endl;
     if (head != nullptr) {
         Node *dumpedNode = head;
         PRINT_HEADING_FOR_DUMP;

@@ -18,18 +18,18 @@
 
 using namespace std;
 
-void Cat::zeroProtocol() {
-    memset(name, 0, MAX_NAME);
-    Gender = UNKNOWN_GENDER;
-    Breed = UNKNOWN_BREED;
-    catFixed = false;
-    next = nullptr;
-    weight = UNKNOWN_WEIGHT;
-}
+//void Cat::zeroProtocol() {
+   // memset(name, 0, MAX_NAME);
+  //  Gender = UNKNOWN_GENDER;
+   // Breed = UNKNOWN_BREED;
+    //catFixed = false;
+    //next = nullptr;
+    //weight = UNKNOWN_WEIGHT;
+//}
 
-Cat::Cat() {
-    zeroProtocol();
-}
+//Cat::Cat() {
+  //  zeroProtocol();
+//}
 
 //Cat::Cat(const char *newName, const gender newGender, const breed newBreed, const Weight newWeight) : Cat() {
   //  setName(newName);

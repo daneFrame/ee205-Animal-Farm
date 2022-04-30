@@ -10,67 +10,57 @@
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 
-#include<iostream>
-#include<stdexcept>
+#include <string>
 
 #include "config.h"
+#include "Mammal.h"
 
-#define MAX_NAME 50
-
-using namespace std;
-
-class string;
-
-class Cat {
-protected:
-    enum gender Gender;
-    enum breed Breed;
-    Weight weight;
-    bool catFixed;
-    std::string name;
-
+class Cat : public Mammal {
 public:
-    Cat* next;
-
-private:
-    void zeroProtocol();
-
-public:
-    Cat();
-
-    Cat(std::string *newName, const gender newGender, const breed newBreed, const Weight newWeight);
-
-
-    //Cat(const char *newName, const gender newGender, const breed newBreed, const Weight newWeight);
-
-    virtual ~Cat();
-
-public:
-    //const char *getName() const noexcept;
-    std::string *getName() const noexcept;
-    //void setName(const char* newName);
-    void setName(std::string* newName);
-    gender getGender() const noexcept;
-    breed getBreed() const noexcept;
-    bool isFixed() const noexcept;
-    void fixCat() noexcept;
-    Weight getWeight() const noexcept;
-    void setWeight(Weight newWeight);
-    virtual std::string speak() const;
+    static const std::string      SPECIES_NAME;
+    static const Weight::t_weight MAX_WEIGHT;
 
 protected:
-public:
-    void setGender(gender newGender);
-void setBreed(breed newBreed);
+    std::string name ;
+    bool        isCatFixed ;
 
 public:
-    bool print() const noexcept;
-    bool validate() const noexcept;
+    explicit Cat( const std::string& newName ) : Mammal( MAX_WEIGHT, SPECIES_NAME ) {
+        if( !validateName( newName) ) {
+            throw std::out_of_range( "Cats must have a name" );
+        }
+        name = newName;
+        isCatFixed = false;
+
+        Cat::validate();
+    }
+
+    Cat( const std::string&     newName
+            ,const Color            newColor
+            ,const bool             newIsFixed
+            ,const Gender           newGender
+            ,const Weight::t_weight newWeight
+    ) : Mammal( newColor, newGender, newWeight, MAX_WEIGHT, SPECIES_NAME ) {
+        if( !validateName( newName) ) {
+            throw std::out_of_range( "Cats must have a name" );
+        }
+        name = newName;
+        isCatFixed = newIsFixed;
+
+        Cat::validate();
+    }
 
 public:
-    //static bool validateName(const char* newName);
-    static bool validateName(std::string newName);
-    static bool validateGender(const gender newGender);
-    static bool validateBreed(const breed newBreed);
-    static bool validateWeight(const Weight newWeight);
+    std::string getName() const noexcept ;
+    void setName( const std::string& newName );
+    bool isFixed() const noexcept ;
+    void fixCat() noexcept ;
+
+public:
+    std::string speak() const noexcept override;
+    void dump() const noexcept override;
+    bool validate() const noexcept override;
+
+public:
+    static bool validateName( const std::string& newName ) ;
 };
