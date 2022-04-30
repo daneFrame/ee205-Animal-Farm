@@ -12,6 +12,7 @@
 
 #include <string>
 
+#include "Weight.h"
 #include "config.h"
 #include "Mammal.h"
 
@@ -58,8 +59,8 @@ public:
 
 public:
     std::string speak() const noexcept override;
-    void dump() const noexcept override;
-    bool validate() const noexcept override;
+    void dump() const noexcept;
+    bool validate() const noexcept ;
 
 public:
     static bool validateName( const std::string& newName ) ;

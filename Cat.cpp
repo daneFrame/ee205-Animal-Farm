@@ -87,20 +87,6 @@ Weight Cat::getWeight() const noexcept {
 
 #define FORMAT_LINE(className, member) cout << setw(8) << ( className ) << setw(20) << member << setw(52)
 
-bool Cat::print() const noexcept {
-    assert(validate());
-    cout << setw(80) << setfill( '=' ) << "" << endl;
-    cout << setfill( ' ' );
-    cout << left;
-    cout << boolalpha;
-    FORMAT_LINE("Cat","name") << getName() << endl;
-    FORMAT_LINE("Cat","gender") << genderName(getGender()) << endl;
-    FORMAT_LINE("Cat","breed") << breedName(getBreed()) << endl;
-    FORMAT_LINE("Cat", "isFixed") << isFixed() << endl;
-    FORMAT_LINE("Cat","weight") << getWeight() << endl;
-    return true;
-}
-
 bool Cat::validate() const noexcept {
     try {
         validateName(name);
@@ -151,7 +137,7 @@ bool Cat::validateWeight(const Weight newWeight) {
 }
 
 void Cat::fixCat() noexcept {
-    Cat::catFixed = true;
+    Cat::isCatFixed = true;
 }
 
 void Cat::setWeight(Weight newWeight) {
