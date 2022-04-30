@@ -64,6 +64,8 @@ void Animal::setGender(const Gender newGender){
 bool Animal::validate() const noexcept{
 assert(validateClassification(getClassification()));
 assert(validateSpecies(getSpecies()));
+assert(weight.validate());
+    return true;
 }
 
 bool Animal::validateClassification	(	const std::string & 	checkClassification	) noexcept	{
