@@ -150,6 +150,6 @@ void Cat::fixCat() noexcept {
     //Cat::Breed = newBreed;
 //}
 
-std::string Cat::speak() const {
+std::string Cat::speak() const noexcept {
     return "Meow";
 }
