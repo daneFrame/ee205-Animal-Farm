@@ -64,6 +64,11 @@ newNode->next = head;
 head = newNode;
 }
 
-bool validate() noexcept{
-
+bool SinglyLinkedList::validate() noexcept {
+assert(head!= nullptr);
+    Node* checkNode = head;
+for(int i = 0; i < size(); i++){
+    checkNode = checkNode->next;
+    checkNode->validate();
+}
 }

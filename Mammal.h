@@ -24,9 +24,9 @@ public:
         setColor( newColor );};
 public:
     ///Color getColor() const noexcept{return color;};
-    void setColor( const Color newColor ) noexcept { color = newColor; }
+    void setColor( const Color newColor ) noexcept;
 public:
     void dump() const noexcept ;
 
-    Color getColor() const;
+    Color getColor() const noexcept;
 };

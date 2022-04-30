@@ -19,13 +19,5 @@ void Mammal::setColor(const Color newColor) noexcept {
 }
 
 void Mammal::dump() const noexcept {
-    std::cout << "SinglyLinkedList:  head=[" << head << std::endl;
-    if (head != nullptr) {
-        Node *dumpedNode = head;
-        PRINT_HEADING_FOR_DUMP;
-        for (int i = 0; i < size(); i++) {
-            dumpedNode->dump();
-            dumpedNode->next;
-        }
-    }
+Animal::dump();
 }
