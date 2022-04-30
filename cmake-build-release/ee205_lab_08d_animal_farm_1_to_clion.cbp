@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.gVAmtB7qui/Animal.cpp">
+			<Option target="ee205_lab_08d_animal_farm_1_to_clion"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.gVAmtB7qui/Animal.h">
 			<Option target="ee205_lab_08d_animal_farm_1_to_clion"/>
 		</Unit>
@@ -90,6 +93,9 @@
 			<Option target="ee205_lab_08d_animal_farm_1_to_clion"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.gVAmtB7qui/Color.h">
+			<Option target="ee205_lab_08d_animal_farm_1_to_clion"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.gVAmtB7qui/Gender.h">
 			<Option target="ee205_lab_08d_animal_farm_1_to_clion"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.gVAmtB7qui/List.cpp">

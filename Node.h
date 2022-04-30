@@ -21,7 +21,7 @@ class Node {
 
 public:
     virtual void dump() const {
-        FORMAT_LINE_FOR_DUMP("Node", "this") << this << std::endl;
+        ///FORMAT_LINE_FOR_DUMP("Node", "this") << this << std::endl;
         FORMAT_LINE_FOR_DUMP("Node", "next") << next << std::endl;
     }
 

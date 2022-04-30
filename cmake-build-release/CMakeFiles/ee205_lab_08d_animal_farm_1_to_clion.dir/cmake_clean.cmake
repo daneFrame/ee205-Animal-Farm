@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Animal.cpp.o"
+  "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Animal.cpp.o.d"
   "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Cat.cpp.o"
   "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Cat.cpp.o.d"
   "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/List.cpp.o"

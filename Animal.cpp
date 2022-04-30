@@ -17,6 +17,7 @@
 #include "List.h"
 #include "SinglyLinkedList.h"
 #include "Node.h"
+#include "Mammal.h"
 
 Animal::Animal(const Weight::t_weight	newMaxWeight, const std::string & newClassification, const std::string & newSpecies){
     weight.setMaxWeight(newMaxWeight);
@@ -34,17 +35,17 @@ Animal::Animal(const Gender newGender, const Weight::t_weight newWeight, const W
 }
 
 void Animal::dump() const noexcept {
-    std::cout << "Animal:  head=[" << head << std::endl;
-    if (head != nullptr) {
-        Node *dumpedNode = head;
-        PRINT_HEADING_FOR_DUMP;
-        for (int i = 0; i < size(); i++) {
-            dumpedNode->dump();
-            dumpedNode->next;
-        }
-    }
-}
+    FORMAT_LINE_FOR_DUMP("Node", "this") << this << endl;
+    FORMAT_LINE_FOR_DUMP("Animal", "this") << this << endl;
+    FORMAT_LINE_FOR_DUMP("Animal", "kingdom") << getKingdom() << endl;
+    FORMAT_LINE_FOR_DUMP("Animal", "classification") << getClassification() << endl;
+    FORMAT_LINE_FOR_DUMP("Animal", "species") << getSpecies() << endl;
+    FORMAT_LINE_FOR_DUMP("Animal", "gender") << getGender() << endl;
+    std::cout << "Animal  weight              " << getWeight() << " out of " << weight.maxWeight << " "
+              << weight.unitOfWeight << std::endl;
 
+    ///FORMAT_LINE_FOR_DUMP("Mammal", "color") << getColor << endl;
+}
 std::string Animal::getKingdom() const noexcept{
     return KINGDOM_NAME;
 }
@@ -57,7 +58,7 @@ void Animal::setGender(const Gender newGender){
     if(gender == Gender::UNKNOWN_GENDER){
         gender = newGender;
     }else{
-        std::cout << logic_error("Gender is known and therefore cannot be changed");
+        std::logic_error("Gender is known and therefore cannot be changed");
     }
 }
 

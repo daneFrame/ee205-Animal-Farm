@@ -9,6 +9,7 @@
 /// @date   DAY_MON_YEAR
 ///////////////////////////////////////////////////////////////////////////////
 #include "Mammal.h"
+#include "Animal.h"
 
 Color Mammal::getColor() const noexcept {
     return color;
@@ -19,5 +20,5 @@ void Mammal::setColor(const Color newColor) noexcept {
 }
 
 void Mammal::dump() const noexcept {
-Animal::dump();
+    Animal::dump();
 }

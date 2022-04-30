@@ -12,6 +12,8 @@
 
 #include "Animal.h"
 #include "Color.h"
+#include "config.h"
+#include "Weight.h"
 
 class Mammal : public Animal {
 public:

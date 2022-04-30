@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/tmp/tmp.gVAmtB7qui/Animal.cpp" "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Animal.cpp.o" "gcc" "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Animal.cpp.o.d"
   "/tmp/tmp.gVAmtB7qui/Cat.cpp" "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Cat.cpp.o" "gcc" "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Cat.cpp.o.d"
   "/tmp/tmp.gVAmtB7qui/List.cpp" "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/List.cpp.o" "gcc" "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/List.cpp.o.d"
   "/tmp/tmp.gVAmtB7qui/Mammal.cpp" "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Mammal.cpp.o" "gcc" "CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Mammal.cpp.o.d"

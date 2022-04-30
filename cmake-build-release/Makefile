@@ -129,6 +129,30 @@ ee205_lab_08d_animal_farm_1_to_clion/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/build.make CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/build
 .PHONY : ee205_lab_08d_animal_farm_1_to_clion/fast
 
+Animal.o: Animal.cpp.o
+.PHONY : Animal.o
+
+# target to build an object file
+Animal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/build.make CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Animal.cpp.o
+.PHONY : Animal.cpp.o
+
+Animal.i: Animal.cpp.i
+.PHONY : Animal.i
+
+# target to preprocess a source file
+Animal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/build.make CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Animal.cpp.i
+.PHONY : Animal.cpp.i
+
+Animal.s: Animal.cpp.s
+.PHONY : Animal.s
+
+# target to generate assembly for a file
+Animal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/build.make CMakeFiles/ee205_lab_08d_animal_farm_1_to_clion.dir/Animal.cpp.s
+.PHONY : Animal.cpp.s
+
 Cat.o: Cat.cpp.o
 .PHONY : Cat.o
 
@@ -282,6 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ee205_lab_08d_animal_farm_1_to_clion"
+	@echo "... Animal.o"
+	@echo "... Animal.i"
+	@echo "... Animal.s"
 	@echo "... Cat.o"
 	@echo "... Cat.i"
 	@echo "... Cat.s"
