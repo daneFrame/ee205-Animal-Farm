@@ -47,13 +47,13 @@ inline std::ostream & 	operator<< (std::ostream &lhs_stream, const Color &rhs_Co
             lhs_stream << "Ginger";
             break;
         case Color::CREAM:
-            lhs_stream << "Cream"
+            lhs_stream << "Cream";
             break;
         case Color::CINNAMON:
-            lhs_stream << "Cinnamon"
+            lhs_stream << "Cinnamon";
             break;
         case Color::CALICO:
-            lhs_stream << "Calico"
+            lhs_stream << "Calico";
             break;
         default:
             throw std::out_of_range( PROGRAM_NAME ": Gender not mapped to a string" );
