@@ -36,6 +36,7 @@ Animal::Animal(const Gender newGender, const Weight::t_weight newWeight, const W
 
 void Animal::dump() const noexcept {
     FORMAT_LINE_FOR_DUMP("Node", "this") << this << endl;
+    FORMAT_LINE_FOR_DUMP( "Node", "next" ) << this->next << endl;
     FORMAT_LINE_FOR_DUMP("Animal", "this") << this << endl;
     FORMAT_LINE_FOR_DUMP("Animal", "kingdom") << getKingdom() << endl;
     FORMAT_LINE_FOR_DUMP("Animal", "classification") << getClassification() << endl;
