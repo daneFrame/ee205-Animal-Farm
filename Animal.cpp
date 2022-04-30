@@ -62,6 +62,14 @@ void Animal::setGender(const Gender newGender){
     }
 }
 
+Weight::t_weight Animal::getWeight() const noexcept {
+    return weight.getWeight();
+}
+
+Gender Animal::getGender() const noexcept {
+    return gender;
+}
+
 bool Animal::validate() const noexcept{
 assert(validateClassification(getClassification()));
 assert(validateSpecies(getSpecies()));
